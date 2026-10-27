@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>crifa ポートフォリオ｜YouTubeの企画・撮影・編集・運用</title>
+<meta name="description" content="株式会社クリファ（crifa）の動画制作・YouTube運用のポートフォリオ。企画・構成・撮影・編集・運用まで、ディレクターと編集者のチームでお受けしています。">
+<meta property="og:title" content="crifa ポートフォリオ">
+<meta property="og:description" content="YouTubeの企画・撮影・編集・運用を、ディレクターと編集者のチームで。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --ink:#1d1d1f; --sub:#5f6168; --line:#e6e3dc;
+  --accent:#d9480f; --accent-soft:#fff1e8; --dark:#16181d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.en{font-family:Montserrat,sans-serif;letter-spacing:.08em}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Montserrat,sans-serif;font-weight:700;font-size:20px;text-decoration:none;letter-spacing:.04em}
+.logo span{color:var(--accent)}
+nav a{font-size:13px;text-decoration:none;margin-left:22px;color:var(--sub)}
+nav a:hover{color:var(--accent)}
+@media(max-width:720px){nav{display:none}}
+
+/* hero */
+.hero{padding:96px 0 80px}
+.hero .kicker{color:var(--accent);font-weight:700;font-size:13px}
+.hero h1{font-size:clamp(30px,5.2vw,52px);line-height:1.35;margin:14px 0 22px;font-weight:700;letter-spacing:.02em}
+.hero p{color:var(--sub);max-width:640px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 14px;font-size:13px}
+.cta{display:inline-block;margin-top:34px;background:var(--ink);color:#fff;text-decoration:none;padding:13px 28px;border-radius:6px;font-weight:700;font-size:14px}
+.cta:hover{background:var(--accent)}
+
+/* sections */
+section{padding:80px 0;border-top:1px solid var(--line)}
+.sec-head{margin-bottom:40px}
+.sec-head .en{color:var(--accent);font-size:13px;font-weight:700}
+.sec-head h2{font-size:clamp(24px,3.4vw,32px);line-height:1.4;margin-top:6px}
+.sec-head p{color:var(--sub);margin-top:10px}
+
+/* strengths */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px}
+.card .num{font-family:Montserrat,sans-serif;font-weight:700;color:var(--accent);font-size:14px}
+.card h3{font-size:19px;line-height:1.5;margin:8px 0 12px}
+.card p,.card li{color:var(--sub);font-size:15px}
+.card ul{padding-left:1.2em;margin-top:8px}
+
+/* results */
+.result{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px;display:flex;flex-direction:column}
+.result .tag{font-size:12px;color:var(--accent);font-weight:700}
+.result h3{font-size:18px;margin:4px 0 18px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px 10px;margin-bottom:18px}
+.stat b{display:block;font-family:Montserrat,"Noto Sans JP",sans-serif;font-size:26px;line-height:1.2}
+.stat small{color:var(--sub);font-size:12px}
+.result .scope{font-size:13px;color:var(--sub);border-top:1px dashed var(--line);padding-top:14px;margin-top:auto}
+.highlight{background:var(--accent-soft);border-radius:6px;padding:8px 12px;font-size:14px;margin-bottom:14px}
+.note{font-size:12px;color:var(--sub);margin-top:16px}
+
+/* works */
+.filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.filter button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 16px;cursor:pointer;color:var(--ink)}
+.filter button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:860px){.works{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.works{grid-template-columns:1fr}}
+.work{text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.work:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+.thumb{aspect-ratio:16/9;background:#ddd center/cover no-repeat;position:relative}
+.thumb .kind{position:absolute;left:10px;top:10px;background:rgba(22,24,29,.85);color:#fff;font-size:11px;padding:2px 10px;border-radius:4px}
+.work .body{padding:16px 18px 20px}
+.work .ch{font-size:12px;color:var(--accent);font-weight:700}
+.work h3{font-size:15px;line-height:1.6;margin:4px 0 8px}
+.work p{font-size:13px;color:var(--sub)}
+.work .role{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.work .role span{font-size:11px;border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--sub)}
+.works-sub{font-size:18px;margin:48px 0 18px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:760px){.skills{grid-template-columns:1fr}}
+.skill h3{font-size:17px;margin-bottom:8px}
+.skill h3::before{content:"";display:inline-block;width:10px;height:10px;background:var(--accent);border-radius:2px;margin-right:10px;vertical-align:1px}
+
+/* flow */
+.flow{counter-reset:f;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:860px){.flow{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.flow{grid-template-columns:1fr}}
+.flow li{list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px}
+.flow li::before{counter-increment:f;content:"STEP " counter(f);font-family:Montserrat,sans-serif;font-weight:700;font-size:12px;color:var(--accent)}
+.flow h3{font-size:16px;margin:6px 0 6px}
+.flow p{font-size:14px;color:var(--sub)}
+
+/* about */
+.about{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
+@media(max-width:720px){.about{grid-template-columns:1fr}}
+.about img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.about h3{font-size:22px}
+.about .role-line{color:var(--sub);font-size:14px;margin-bottom:18px}
+.timeline{list-style:none;margin-top:18px;border-left:2px solid var(--line);padding-left:20px}
+.timeline li{position:relative;margin-bottom:16px;font-size:15px}
+.timeline li::before{content:"";position:absolute;left:-27px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.timeline b{display:block}
+.timeline span{color:var(--sub);font-size:14px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+
+/* contact */
+.contact{background:var(--dark);color:#fff;border-top:none}
+.contact .sec-head p{color:#b8bac2}
+.contact a.mail{display:inline-block;font-family:Montserrat,sans-serif;font-size:clamp(20px,3.6vw,30px);color:#fff;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:4px}
+.contact .site{display:block;margin-top:18px;color:#b8bac2;font-size:14px}
+footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;padding:24px 0 36px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">crifa<span>.</span></a>
+    <nav>
+      <a href="#strength">強み</a>
+      <a href="#results">運用実績</a>
+      <a href="#works">制作実績</a>
+      <a href="#skill">できること</a>
+      <a href="#about">代表</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker en">PORTFOLIO — 株式会社クリファ</div>
+    <h1>企画から撮影・編集・運用まで、<br>成果につながるYouTubeを。</h1>
+    <p>株式会社クリファ（crifa）は、ディレクターと編集者のチームでYouTubeの制作と運用をお受けしています。編集だけのご依頼から、チャンネルの立ち上げ・運用、YouTubeからサイトやLINEへの導線づくりまでご相談いただけます。</p>
+    <div class="chips">
+      <span class="chip">企画・構成</span><span class="chip">撮影</span><span class="chip">編集（長尺・ショート）</span><span class="chip">サムネイル・タイトル</span><span class="chip">チャンネル運用・分析</span><span class="chip">Web・導線設計</span>
+    </div>
+    <a class="cta" href="#contact">お問い合わせ</a>
+  </div>
+</div>
+
+<section id="strength">
+  <div class="wrap">
+    <div class="sec-head"><div class="en">STRENGTH</div><h2>強み</h2></div>
+    <div class="grid3">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>20社以上の企業チャンネルを運用してきた経験</h3>
+        <p>業界大手のYouTube制作会社で、20社以上の企業チャンネルを運用してきました。成功した例と、うまくいかなかった例の両方がケースごとにたまっています。</p>
+        <ul><li>メンズクリニック・デンタルクリニック</li><li>学習塾・SES企業・エンジニア採用</li><li>声優・VC・結婚相談所 など</li></ul>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3>成約までを考えた導線の設計</h3>
+        <p>インハウスでWeb担当をしていた経験から、再生数だけでなく「問い合わせ・来店・採用」につながるチャンネル設計を考えます。</p>
+        <ul><li>YouTubeからLINE・サイトへの誘導と施策のご提案</li><li>アンケートやGoogleアナリティクスでの効果測定と分析</li></ul>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3>企画・撮影・編集・運用まで一括で</h3>
+        <p>運用と制作の両方を担当してきたため、PMとして全体をまとめてお受けできます。一眼カメラとマイクでの撮影から、編集・サムネイル・月次の振り返りまで対応します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <div class="sec-head"><div class="en">RESULTS</div><h2>運用実績の一例</h2><p>前職を含め、運用を担当したチャンネルの一例です（チャンネル名は伏せています）。</p></div>
+    <div class="grid3">
+      <div class="result">
+        <div class="tag">集客</div>
+        <h3>メンズクリニックのチャンネル</h3>
+        <div class="stats">
+          <div class="stat"><b>18万人</b><small>登録者</small></div>
+          <div class="stat"><b>300万</b><small>月間再生</small></div>
+          <div class="stat"><b>2年</b><small>担当期間</small></div>
+          <div class="stat"><b>2名</b><small>運営体制</small></div>
+        </div>
+        <div class="highlight">来院時アンケートで、YouTubeを見て来た方が約9割</div>
+        <div class="scope">月1回のレポート、企画、構成、撮影、タイトル・サムネイル、編集ディレクション、ゲストのキャスティング</div>
+      </div>
+      <div class="result">
+        <div class="tag">採用</div>
+        <h3>エンジニア採用のチャンネル</h3>
+        <div class="stats">
+          <div class="stat"><b>2,500人</b><small>登録者</small></div>
+          <div class="stat"><b>3万</b><small>月間再生</small></div>
+          <div class="stat"><b>7か月</b><small>担当期間</small></div>
+          <div class="stat"><b>1名</b><small>運営体制</small></div>
+        </div>
+        <div class="highlight">採用時アンケートで、YouTube経由の採用が月5名</div>
+        <div class="scope">チャンネル立ち上げ、月1回のレポート、企画、構成、撮影、タイトル・サムネイル、編集ディレクション</div>
+      </div>
+      <div class="result">
+        <div class="tag">ブランディング</div>
+        <h3>起業家向け・資金調達のチャンネル</h3>
+        <div class="stats">
+          <div class="stat"><b>1.2万人</b><small>登録者</small></div>
+          <div class="stat"><b>6万</b><small>月間再生</small></div>
+          <div class="stat"><b>7か月</b><small>担当期間</small></div>
+          <div class="stat"><b>1名</b><small>運営体制</small></div>
+        </div>
+        <div class="scope">月1回のレポート、企画、構成、撮影、タイトル・サムネイル、編集ディレクション</div>
+      </div>
+    </div>
+    <p class="note">※数字は担当していた当時のものです。集客や採用の結果は、商品やサービス、運用の条件によって変わります。</p>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head"><div class="en">WORKS</div><h2>制作実績</h2><p>カードを押すとYouTubeが開きます。</p></div>
+
+    <div class="filter" role="group" aria-label="絞り込み">
+      <button type="button" data-f="all" aria-pressed="true">すべて</button>
+      <button type="button" data-f="biz">ビジネス・採用</button>
+      <button type="button" data-f="life">婚活・ライフスタイル</button>
+      <button type="button" data-f="ent">バラエティ・ドキュメンタリー</button>
+    </div>
+
+    <div class="works" id="works-grid">
+      <a class="work" data-c="biz" href="https://www.youtube.com/playlist?list=PL8lZLH937WYQcz5hZ7xUD9Tt-wm_ZX0kH" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/N2J22MVPoHY/hqdefault.jpg)"><span class="kind">再生リスト</span></div>
+        <div class="body"><div class="ch">運用と制作の両方を担当</div><h3>企業チャンネルの運用・制作</h3><p>スタートアップ投資TV、SESチャンネル、なこーど婚活応援チャンネル、TLDチャンネル ほか</p><div class="role"><span>運用</span><span>企画</span><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="life" href="https://www.youtube.com/@nanakoufujisaki/videos" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/npmpAzYxClc/hqdefault.jpg)"><span class="kind">チャンネル</span></div>
+        <div class="body"><div class="ch">旅する藤崎奈々子</div><h3>タレント藤崎奈々子さんの公式チャンネル</h3><p>旅・サーフィン・美容など、女性向けのライフスタイル</p><div class="role"><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="life" href="https://www.youtube.com/@ure_aka/videos" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/zitbxeaZnUE/hqdefault.jpg)"><span class="kind">チャンネル</span></div>
+        <div class="body"><div class="ch">売れたら垢抜けるってホント?</div><h3>男性向けの垢抜け企画のチャンネル</h3><p>芸人さんの垢抜けをテーマにしたバラエティ</p><div class="role"><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="life" href="https://www.youtube.com/watch?v=8GEsArygAqE" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/8GEsArygAqE/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">wakatte TV</div><h3>【結婚×学歴】婚活市場で学歴はどこまで通用するのか</h3><div class="role"><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="life" href="https://youtu.be/s-YxODK7fLE" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/s-YxODK7fLE/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">なこーど婚活応援チャンネル</div><h3>連盟のデータから、結婚相談所で成婚できない人の共通点</h3><div class="role"><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://youtu.be/GrwSueTDwzw" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GrwSueTDwzw/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">TLDチャンネル</div><h3>【習慣と環境】トップセールスに共通する特徴</h3><div class="role"><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://youtu.be/xo3nvlI6Zl0" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/xo3nvlI6Zl0/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">こうすけ【軽貨物で成り上がり】</div><h3>2人分の荷物を1人で検証してみました</h3><div class="role"><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://www.youtube.com/watch?v=GQAWiEGA6Hs" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GQAWiEGA6Hs/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">加藤ゼミナール</div><h3>令和5年 司法試験合格発表</h3><div class="role"><span>制作</span></div></div>
+      </a>
+    </div>
+
+    <h3 class="works-sub">前職（エンジニアスクール）での制作</h3>
+    <div class="works" id="works-grid-2">
+      <a class="work" data-c="biz" href="https://youtu.be/9pe61twIMjg" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/9pe61twIMjg/hqdefault.jpg)"><span class="kind">対談</span></div>
+        <div class="body"><div class="ch">ディープロ 公式チャンネル</div><h3>未経験転職で面接前にやるべき4つの対策</h3><p>目的：スクールの認知と成約。経験者に対談形式で話してもらう企画</p><div class="role"><span>企画</span><span>構成</span><span>撮影</span><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://youtu.be/RnoqYfBQ-_A" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/RnoqYfBQ-_A/hqdefault.jpg)"><span class="kind">説明会</span></div>
+        <div class="body"><div class="ch">ディープロ 公式チャンネル</div><h3>【コース紹介】Webエンジニア 就職達成プログラム</h3><p>目的：成約の増加。30代を中心に、年齢で迷う方へ向けた説明動画</p><div class="role"><span>構成</span><span>台本</span><span>撮影</span><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://youtu.be/D8GfemEshGM" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/D8GfemEshGM/hqdefault.jpg)"><span class="kind">ライブ配信</span></div>
+        <div class="body"><div class="ch">ディープロ 公式チャンネル</div><h3>Python認定基礎試験 徹底解説（配信イベント）</h3><p>目的：自社教材の認知と購入。合格者に勉強法を語ってもらう配信</p><div class="role"><span>企画</span><span>構成</span><span>撮影</span><span>配信</span></div></div>
+      </a>
+      <a class="work" data-c="ent" href="https://youtu.be/Mhqfu3Bhsos" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/Mhqfu3Bhsos/hqdefault.jpg)"><span class="kind">バラエティ</span></div>
+        <div class="body"><div class="ch">よしもとアカデミー</div><h3>両隣の人の会話が入れ替わったら、ジョイマン高木はどんな反応をするのか？</h3><p>タレントのお二人にドッキリを仕掛ける検証企画</p><div class="role"><span>構成</span><span>撮影</span><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="ent" href="https://youtu.be/dPQrP1vUCGg" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/dPQrP1vUCGg/hqdefault.jpg)"><span class="kind">ドキュメンタリー</span></div>
+        <div class="body"><div class="ch">キノトビ アナザーストーリー</div><h3>キングオブコントに初挑戦するスクール生コンビに密着</h3><p>「なぜプロではない2人が1回戦を突破できたのか」を軸に構成</p><div class="role"><span>企画</span><span>構成</span><span>撮影</span><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="ent" href="https://youtu.be/OhgfZg90jeU" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/OhgfZg90jeU/hqdefault.jpg)"><span class="kind">イベントOP</span></div>
+        <div class="body"><div class="ch">渋谷ヨシモト∞ドーム</div><h3>「提案クラシックス」ライブ公演のオープニングVTR</h3><div class="role"><span>構成</span><span>編集</span></div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="skill">
+  <div class="wrap">
+    <div class="sec-head"><div class="en">SKILL</div><h2>できること</h2></div>
+    <div class="skills">
+      <div class="card skill"><h3>企画・構成</h3><p>チャンネルの目的とターゲットから企画を立て、台本と構成を作ります。出演者との打ち合わせや、当日の進行まで担当します。</p></div>
+      <div class="card skill"><h3>撮影</h3><p>一眼カメラ（Panasonic GH7・GH5S）とワイヤレスマイク（RODE Wireless GO ほか）で、インタビュー・対談・ロケ・ライブ配信まで撮影します。</p></div>
+      <div class="card skill"><h3>編集</h3><p>Premiere Pro・After Effects・Photoshopで、カット・テロップ・BGM／SE・色補正・サムネイルまで作ります。長尺（横）とショート（縦）の両方に対応し、先方のプロジェクトの形での納品もできます。</p></div>
+      <div class="card skill"><h3>運用・分析</h3><p>タイトル・サムネイル・概要欄の設計、月1回のレポート、YouTubeアナリティクスをもとにした改善のご提案をします。</p></div>
+      <div class="card skill"><h3>Web・導線設計</h3><p>前職でWeb担当・プロダクトオーナーとして、Googleアナリティクスやヒートマップでサイトを改善してきました。YouTubeから問い合わせや採用につなげる導線を一緒に考えます。</p></div>
+      <div class="card skill"><h3>資格</h3><div class="badges"><span class="chip">国家資格キャリアコンサルタント</span><span class="chip">Googleアナリティクス個人認定資格（GAIQ）</span><span class="chip">Photoshop®クリエイター能力認定試験 スタンダード</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head"><div class="en">FLOW</div><h2>進め方</h2></div>
+    <ol class="flow">
+      <li><h3>ヒアリング</h3><p>チャンネルの目的、視聴者、参考の動画、決まりごとを伺います。</p></li>
+      <li><h3>1本目の制作</h3><p>1本目は代表も編集に入り、完成品をお見せします。仕上がりでご判断ください。</p></li>
+      <li><h3>確認と修正</h3><p>書き出した版ごとに秒数つきでご指摘をいただき、直して版を重ねます。</p></li>
+      <li><h3>決まりとして残す</h3><p>いただいたご指摘はチャンネルの決まりとして残し、次の回から反映します。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><div class="en">ABOUT</div><h2>代表</h2></div>
+    <div class="about">
+      <img src="img/profile.jpg" alt="代表 髙橋弘嗣" width="200" height="200">
+      <div>
+        <h3>髙橋 弘嗣</h3>
+        <div class="role-line">株式会社クリファ 代表取締役／YouTubeディレクター</div>
+        <p>エンジニアスクールを運営するIT企業で、人材紹介事業の立ち上げ、Web担当、動画事業の立ち上げを経験しました。その後、YouTube運用代行の会社でディレクター・PMとして企業チャンネルの運用と制作に携わり、2025年に株式会社クリファを設立しました。</p>
+        <ul class="timeline">
+          <li><b>株式会社ダイビック（DIVE INTO CODE）</b><span>人材紹介事業の立ち上げ、Web担当・プロダクトオーナー。自社YouTubeチャンネルを2つ立ち上げ、動画203本・教育コンテンツ49本の制作とライブ配信を担当</span></li>
+          <li><b>株式会社Suneight</b><span>YouTubeディレクター・PM。企業チャンネルの立ち上げ・運用・広告動画の制作。「令和の虎」の制作にも参加</span></li>
+          <li><b>株式会社クリファ（2025年10月〜）</b><span>企業向けの動画マーケティング支援。YouTube・TikTokの運用支援と動画制作</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head"><div class="en">CONTACT</div><h2>お問い合わせ</h2><p>編集のみのご依頼から、チャンネルの立ち上げ・運用のご相談まで、お気軽にご連絡ください。</p></div>
+    <a class="mail" href="mailto:office@crifa.co.jp">office@crifa.co.jp</a>
+    <a class="site" href="https://crifa.co.jp/" target="_blank" rel="noopener">株式会社クリファ 公式サイト → crifa.co.jp</a>
+  </div>
+</section>
+</main>
+
+<footer>© crifa Inc.</footer>
+
+<script>
+document.querySelectorAll('.filter button').forEach(function(b){
+  b.addEventListener('click',function(){
+    var f=b.dataset.f;
+    document.querySelectorAll('.filter button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    document.querySelectorAll('.work').forEach(function(w){w.style.display=(f==='all'||w.dataset.c===f)?'':'none'});
+  });
+});
+</script>
+</body>
+</html>
