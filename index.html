@@ -60,6 +60,13 @@ section{padding:80px 0;border-top:1px solid var(--line)}
 .card ul{padding-left:1.2em;margin-top:8px}
 
 /* results */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.result-link{text-decoration:none;transition:transform .15s,box-shadow .15s}
+.result-link:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+.result .client{font-size:13px;color:var(--sub);margin:-12px 0 16px}
+.result .big{font-size:18px;margin-bottom:16px}
+.result .big b{font-family:Montserrat,"Noto Sans JP",sans-serif;font-size:30px;color:var(--accent);margin:0 4px}
 .result{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px;display:flex;flex-direction:column}
 .result .tag{font-size:12px;color:var(--accent);font-weight:700}
 .result h3{font-size:18px;margin:4px 0 18px}
@@ -181,7 +188,25 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
 
 <section id="results">
   <div class="wrap">
-    <div class="sec-head"><div class="en">RESULTS</div><h2>運用実績の一例</h2><p>前職を含め、運用を担当したチャンネルの一例です（チャンネル名は伏せています）。</p></div>
+    <div class="sec-head"><div class="en">RESULTS</div><h2>運用実績の一例</h2><p>チャンネルの立ち上げから運用・制作まで担当した例です。</p></div>
+    <h3 class="works-sub" style="margin-top:0">crifaでの実績</h3>
+    <div class="grid2">
+      <a class="result result-link" href="https://www.youtube.com/@naco-do-l6w" target="_blank" rel="noopener">
+        <div class="tag">成約</div>
+        <h3>なこーど婚活応援チャンネル</h3>
+        <div class="client">株式会社マトワークス様</div>
+        <div class="big">開始4か月で<b>月10件以上</b>の成約</div>
+        <div class="scope">チャンネルの立ち上げ・運用・制作</div>
+      </a>
+      <a class="result result-link" href="https://www.youtube.com/@KO-SUKE_keikamotsu/videos" target="_blank" rel="noopener">
+        <div class="tag">採用</div>
+        <h3>こうすけ【軽貨物で成り上がり】</h3>
+        <div class="client">LUXEL株式会社様</div>
+        <div class="big">開始<b>1か月</b>で採用に成功</div>
+        <div class="scope">チャンネルの立ち上げ・運用・制作</div>
+      </a>
+    </div>
+    <h3 class="works-sub">前職での実績（チャンネル名は伏せています）</h3>
     <div class="grid3">
       <div class="result">
         <div class="tag">集客</div>
@@ -241,11 +266,11 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
       </a>
       <a class="work" data-c="life" href="https://www.youtube.com/@nanakoufujisaki/videos" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/npmpAzYxClc/hqdefault.jpg)"><span class="kind">チャンネル</span></div>
-        <div class="body"><div class="ch">旅する藤崎奈々子</div><h3>タレント藤崎奈々子さんの公式チャンネル</h3><p>旅・サーフィン・美容など、女性向けのライフスタイル</p><div class="role"><span>制作</span></div></div>
+        <div class="body"><div class="ch">旅する藤崎奈々子</div><h3>タレント藤崎奈々子さんの公式チャンネル</h3><p>旅・美容など女性向けのライフスタイル。テロップと構成の雛形づくりから担当し、いまも同じ雛形で続いています</p><div class="role"><span>雛形づくり</span><span>編集</span><span>サムネイル</span><span>バナー</span></div></div>
       </a>
       <a class="work" data-c="life" href="https://www.youtube.com/@ure_aka/videos" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/zitbxeaZnUE/hqdefault.jpg)"><span class="kind">チャンネル</span></div>
-        <div class="body"><div class="ch">売れたら垢抜けるってホント?</div><h3>男性向けの垢抜け企画のチャンネル</h3><p>芸人さんの垢抜けをテーマにしたバラエティ</p><div class="role"><span>制作</span></div></div>
+        <div class="body"><div class="ch">売れたら垢抜けるってホント?</div><h3>男性向けの垢抜け企画のチャンネル</h3><p>株式会社FANY様。芸人さんの垢抜けをテーマにしたバラエティ</p><div class="role"><span>動画デザイン</span><span>サムネイル</span><span>バナー</span></div></div>
       </a>
       <a class="work" data-c="life" href="https://www.youtube.com/watch?v=8GEsArygAqE" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/8GEsArygAqE/hqdefault.jpg)"></div>
@@ -253,7 +278,7 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
       </a>
       <a class="work" data-c="life" href="https://youtu.be/s-YxODK7fLE" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/s-YxODK7fLE/hqdefault.jpg)"></div>
-        <div class="body"><div class="ch">なこーど婚活応援チャンネル</div><h3>連盟のデータから、結婚相談所で成婚できない人の共通点</h3><div class="role"><span>制作</span></div></div>
+        <div class="body"><div class="ch">なこーど婚活応援チャンネル</div><h3>連盟のデータから、結婚相談所で成婚できない人の共通点</h3><p>立ち上げ・運用から担当（開始4か月で月10件以上の成約）</p><div class="role"><span>運用</span><span>制作</span></div></div>
       </a>
       <a class="work" data-c="biz" href="https://youtu.be/GrwSueTDwzw" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GrwSueTDwzw/hqdefault.jpg)"></div>
@@ -261,7 +286,7 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
       </a>
       <a class="work" data-c="biz" href="https://youtu.be/xo3nvlI6Zl0" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/xo3nvlI6Zl0/hqdefault.jpg)"></div>
-        <div class="body"><div class="ch">こうすけ【軽貨物で成り上がり】</div><h3>2人分の荷物を1人で検証してみました</h3><div class="role"><span>編集</span></div></div>
+        <div class="body"><div class="ch">こうすけ【軽貨物で成り上がり】</div><h3>2人分の荷物を1人で検証してみました</h3><p>求人のためのチャンネル。立ち上げ・運用から担当（開始1か月で採用に成功）</p><div class="role"><span>運用</span><span>制作</span></div></div>
       </a>
       <a class="work" data-c="biz" href="https://www.youtube.com/watch?v=GQAWiEGA6Hs" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GQAWiEGA6Hs/hqdefault.jpg)"></div>
@@ -307,7 +332,7 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
       <div class="card skill"><h3>撮影</h3><p>一眼カメラ（Panasonic GH7・GH5S）とワイヤレスマイク（RODE Wireless GO ほか）で、インタビュー・対談・ロケ・ライブ配信まで撮影します。</p></div>
       <div class="card skill"><h3>編集</h3><p>Premiere Pro・After Effects・Photoshopで、カット・テロップ・BGM／SE・色補正・サムネイルまで作ります。長尺（横）とショート（縦）の両方に対応し、先方のプロジェクトの形での納品もできます。</p></div>
       <div class="card skill"><h3>運用・分析</h3><p>タイトル・サムネイル・概要欄の設計、月1回のレポート、YouTubeアナリティクスをもとにした改善のご提案をします。</p></div>
-      <div class="card skill"><h3>Web・導線設計</h3><p>前職でWeb担当・プロダクトオーナーとして、Googleアナリティクスやヒートマップでサイトを改善してきました。YouTubeから問い合わせや採用につなげる導線を一緒に考えます。</p></div>
+      <div class="card skill"><h3>Web・導線設計</h3><p>前職でWeb担当・プロダクトオーナーを3年務め、Googleアナリティクスやヒートマップでアプリ・サイトを改善してきました（半年でCVRを0.8%上昇）。YouTubeから問い合わせや採用につなげる導線を一緒に考えます。</p></div>
       <div class="card skill"><h3>資格</h3><div class="badges"><span class="chip">国家資格キャリアコンサルタント</span><span class="chip">Googleアナリティクス個人認定資格（GAIQ）</span><span class="chip">Photoshop®クリエイター能力認定試験 スタンダード</span></div></div>
     </div>
   </div>
@@ -348,7 +373,7 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
   <div class="wrap">
     <div class="sec-head"><div class="en">CONTACT</div><h2>お問い合わせ</h2><p>編集のみのご依頼から、チャンネルの立ち上げ・運用のご相談まで、お気軽にご連絡ください。</p></div>
     <a class="mail" href="mailto:office@crifa.co.jp">office@crifa.co.jp</a>
-    <a class="site" href="https://crifa.co.jp/" target="_blank" rel="noopener">株式会社クリファ 公式サイト → crifa.co.jp</a>
+    <a class="site" href="https://crifa.co.jp/" target="_blank" rel="noopener">株式会社クリファ 公式サイト（料金プラン・無料相談） → crifa.co.jp</a>
   </div>
 </section>
 </main>
