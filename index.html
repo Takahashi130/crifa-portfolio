@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>crifa ポートフォリオ｜YouTubeの企画・撮影・編集・運用</title>
-<meta name="description" content="株式会社クリファ（crifa）の動画制作・YouTube運用のポートフォリオ。企画・構成・撮影・編集・運用まで、ディレクターと編集者のチームでお受けしています。">
-<meta property="og:title" content="crifa ポートフォリオ">
-<meta property="og:description" content="YouTubeの企画・撮影・編集・運用を、ディレクターと編集者のチームで。">
+<title>髙橋弘嗣 ポートフォリオ｜YouTubeディレクター・動画編集</title>
+<meta name="description" content="YouTubeディレクター・動画編集の髙橋弘嗣のポートフォリオ。制作した動画、運用の実績、できることをまとめています。">
+<meta property="og:title" content="髙橋弘嗣 ポートフォリオ">
+<meta property="og:description" content="YouTubeディレクター・動画編集。制作した動画と運用の実績。">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +43,12 @@ nav a:hover{color:var(--accent)}
 .cta{display:inline-block;margin-top:34px;background:var(--ink);color:#fff;text-decoration:none;padding:13px 28px;border-radius:6px;font-weight:700;font-size:14px}
 .cta:hover{background:var(--accent)}
 
+.hero-grid{display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:center}
+@media(max-width:720px){.hero-grid{grid-template-columns:1fr;gap:24px}}
+.hero-photo{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+@media(max-width:720px){.hero-photo{width:140px;height:140px}}
+.hero h1 small{display:block;font-size:15px;color:var(--sub);font-weight:600;margin-top:4px}
+.hero-role{font-weight:700;margin:-8px 0 18px}
 /* sections */
 section{padding:80px 0;border-top:1px solid var(--line)}
 .sec-head{margin-bottom:40px}
@@ -114,6 +120,7 @@ section{padding:80px 0;border-top:1px solid var(--line)}
 /* about */
 .about{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
 @media(max-width:720px){.about{grid-template-columns:1fr}}
+.about-solo{grid-template-columns:1fr;max-width:760px}
 .about img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
 .about h3{font-size:22px}
 .about .role-line{color:var(--sub);font-size:14px;margin-bottom:18px}
@@ -136,13 +143,13 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#">crifa<span>.</span></a>
+    <a class="logo" href="#">Hirotsugu Takahashi<span>.</span></a>
     <nav>
-      <a href="#strength">強み</a>
+      <a href="#works">制作した動画</a>
       <a href="#results">運用実績</a>
-      <a href="#works">制作実績</a>
+      <a href="#strength">強み</a>
       <a href="#skill">できること</a>
-      <a href="#about">代表</a>
+      <a href="#about">経歴</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
   </div>
@@ -150,38 +157,93 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
 
 <main>
 <div class="hero">
-  <div class="wrap">
-    <div class="kicker en">PORTFOLIO — 株式会社クリファ</div>
-    <h1>企画から撮影・編集・運用まで、<br>成果につながるYouTubeを。</h1>
-    <p>株式会社クリファ（crifa）は、ディレクターと編集者のチームでYouTubeの制作と運用をお受けしています。編集だけのご依頼から、チャンネルの立ち上げ・運用、YouTubeからサイトへの導線づくりまでご相談いただけます。</p>
-    <div class="chips">
-      <span class="chip">企画・構成</span><span class="chip">撮影</span><span class="chip">編集（長尺・ショート）</span><span class="chip">サムネイル・タイトル</span><span class="chip">チャンネル運用・分析</span><span class="chip">Web・導線設計</span>
+  <div class="wrap hero-grid">
+    <img class="hero-photo" src="img/profile.jpg" alt="髙橋弘嗣" width="200" height="200">
+    <div>
+      <div class="kicker en">PORTFOLIO</div>
+      <h1>髙橋 弘嗣<small class="en">Hirotsugu Takahashi</small></h1>
+      <div class="hero-role">YouTubeディレクター・動画編集／株式会社クリファ 代表</div>
+      <p>YouTubeの制作と運用に携わって4年以上になります。企業のチャンネルを20社以上運用し、タレントさんのチャンネルの雛形づくりや、採用・集客のための動画を作ってきました。前職でWeb担当をしていたので、動画を「見られる」だけでなく、問い合わせや採用につなげるところまで考えるのが得意です。</p>
+      <div class="chips">
+        <span class="chip">編集（長尺・ショート）</span><span class="chip">テロップ・構成の雛形づくり</span><span class="chip">サムネイル</span><span class="chip">チャンネル運用・分析</span><span class="chip">Googleアナリティクス</span>
+      </div>
+      <a class="cta" href="#works">制作した動画を見る</a>
     </div>
-    <a class="cta" href="#contact">お問い合わせ</a>
   </div>
 </div>
 
-<section id="strength">
+<section id="works">
   <div class="wrap">
-    <div class="sec-head"><div class="en">STRENGTH</div><h2>強み</h2></div>
-    <div class="grid3">
-      <div class="card">
-        <div class="num">01</div>
-        <h3>20社以上の企業チャンネルを運用してきた経験</h3>
-        <p>業界大手のYouTube制作会社で、20社以上の企業チャンネルを運用してきました。成功した例と、うまくいかなかった例の両方がケースごとにたまっています。</p>
-        <ul><li>メンズクリニック・デンタルクリニック</li><li>学習塾・SES企業・エンジニア採用</li><li>声優・VC・結婚相談所 など</li></ul>
-      </div>
-      <div class="card">
-        <div class="num">02</div>
-        <h3>成約までを考えた導線の設計</h3>
-        <p>インハウスでWeb担当をしていた経験から、再生数だけでなく「問い合わせ・来店・採用」につながるチャンネル設計を考えます。</p>
-        <ul><li>YouTubeからサイトへの誘導と施策のご提案</li><li>アンケートやGoogleアナリティクスでの効果測定と分析</li></ul>
-      </div>
-      <div class="card">
-        <div class="num">03</div>
-        <h3>企画・撮影・編集・運用まで一括で</h3>
-        <p>運用と制作の両方を担当してきたため、PMとして全体をまとめてお受けできます。一眼カメラとマイクでの撮影から、編集・サムネイル・月次の振り返りまで対応します。</p>
-      </div>
+    <div class="sec-head"><div class="en">WORKS</div><h2>制作した動画</h2><p>カードを押すとYouTubeが開きます。</p></div>
+
+    <div class="filter" role="group" aria-label="絞り込み">
+      <button type="button" data-f="all" aria-pressed="true">すべて</button>
+      <button type="button" data-f="biz">ビジネス・採用</button>
+      <button type="button" data-f="life">婚活・ライフスタイル</button>
+      <button type="button" data-f="ent">バラエティ・ドキュメンタリー</button>
+    </div>
+
+    <div class="works" id="works-grid">
+      <a class="work" data-c="biz" href="https://www.youtube.com/playlist?list=PL8lZLH937WYQcz5hZ7xUD9Tt-wm_ZX0kH" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/N2J22MVPoHY/hqdefault.jpg)"><span class="kind">再生リスト</span></div>
+        <div class="body"><div class="ch">運用と制作の両方を担当</div><h3>企業チャンネルの運用・制作</h3><p>スタートアップ投資TV、SESチャンネル、なこーど婚活応援チャンネル、TLDチャンネル ほか</p><div class="role"><span>運用</span><span>企画</span><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="life" href="https://www.youtube.com/@nanakoufujisaki/videos" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/npmpAzYxClc/hqdefault.jpg)"><span class="kind">チャンネル</span></div>
+        <div class="body"><div class="ch">旅する藤崎奈々子</div><h3>タレント藤崎奈々子さんの公式チャンネル</h3><p>旅・美容など女性向けのライフスタイル。テロップと構成の雛形づくりから担当し、いまも同じ雛形で続いています</p><div class="role"><span>雛形づくり</span><span>編集</span><span>サムネイル</span><span>バナー</span></div></div>
+      </a>
+      <a class="work" data-c="life" href="https://www.youtube.com/@ure_aka/videos" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/zitbxeaZnUE/hqdefault.jpg)"><span class="kind">チャンネル</span></div>
+        <div class="body"><div class="ch">売れたら垢抜けるってホント?</div><h3>男性向けの垢抜け企画のチャンネル</h3><p>株式会社FANY様。芸人さんの垢抜けをテーマにしたバラエティ</p><div class="role"><span>動画デザイン</span><span>サムネイル</span><span>バナー</span></div></div>
+      </a>
+      <a class="work" data-c="life" href="https://www.youtube.com/watch?v=8GEsArygAqE" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/8GEsArygAqE/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">wakatte TV</div><h3>【結婚×学歴】婚活市場で学歴はどこまで通用するのか</h3><div class="role"><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="life" href="https://youtu.be/s-YxODK7fLE" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/s-YxODK7fLE/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">なこーど婚活応援チャンネル</div><h3>連盟のデータから、結婚相談所で成婚できない人の共通点</h3><p>立ち上げ・運用から担当（開始4か月で月10件以上の成約）</p><div class="role"><span>運用</span><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://youtu.be/GrwSueTDwzw" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GrwSueTDwzw/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">TLDチャンネル</div><h3>【習慣と環境】トップセールスに共通する特徴</h3><div class="role"><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://youtu.be/xo3nvlI6Zl0" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/xo3nvlI6Zl0/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">こうすけ【軽貨物で成り上がり】</div><h3>2人分の荷物を1人で検証してみました</h3><p>求人のためのチャンネル。立ち上げ・運用から担当（開始1か月で採用に成功）</p><div class="role"><span>運用</span><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://www.youtube.com/watch?v=GQAWiEGA6Hs" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GQAWiEGA6Hs/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">加藤ゼミナール</div><h3>令和5年 司法試験合格発表</h3><div class="role"><span>制作</span></div></div>
+      </a>
+    </div>
+
+    <h3 class="works-sub">前職（エンジニアスクール）で作った動画</h3>
+    <div class="works" id="works-grid-2">
+      <a class="work" data-c="biz" href="https://youtu.be/9pe61twIMjg" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/9pe61twIMjg/hqdefault.jpg)"><span class="kind">対談</span></div>
+        <div class="body"><div class="ch">ディープロ 公式チャンネル</div><h3>未経験転職で面接前にやるべき4つの対策</h3><p>目的：スクールの認知と成約。経験者に対談形式で話してもらう企画</p><div class="role"><span>企画</span><span>構成</span><span>撮影</span><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://youtu.be/RnoqYfBQ-_A" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/RnoqYfBQ-_A/hqdefault.jpg)"><span class="kind">説明会</span></div>
+        <div class="body"><div class="ch">ディープロ 公式チャンネル</div><h3>【コース紹介】Webエンジニア 就職達成プログラム</h3><p>目的：成約の増加。30代を中心に、年齢で迷う方へ向けた説明動画</p><div class="role"><span>構成</span><span>台本</span><span>撮影</span><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://youtu.be/D8GfemEshGM" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/D8GfemEshGM/hqdefault.jpg)"><span class="kind">ライブ配信</span></div>
+        <div class="body"><div class="ch">ディープロ 公式チャンネル</div><h3>Python認定基礎試験 徹底解説（配信イベント）</h3><p>目的：自社教材の認知と購入。合格者に勉強法を語ってもらう配信</p><div class="role"><span>企画</span><span>構成</span><span>撮影</span><span>配信</span></div></div>
+      </a>
+      <a class="work" data-c="ent" href="https://youtu.be/Mhqfu3Bhsos" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/Mhqfu3Bhsos/hqdefault.jpg)"><span class="kind">バラエティ</span></div>
+        <div class="body"><div class="ch">よしもとアカデミー</div><h3>両隣の人の会話が入れ替わったら、ジョイマン高木はどんな反応をするのか？</h3><p>タレントのお二人にドッキリを仕掛ける検証企画</p><div class="role"><span>構成</span><span>撮影</span><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="ent" href="https://youtu.be/dPQrP1vUCGg" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/dPQrP1vUCGg/hqdefault.jpg)"><span class="kind">ドキュメンタリー</span></div>
+        <div class="body"><div class="ch">キノトビ アナザーストーリー</div><h3>キングオブコントに初挑戦するスクール生コンビに密着</h3><p>「なぜプロではない2人が1回戦を突破できたのか」を軸に構成</p><div class="role"><span>企画</span><span>構成</span><span>撮影</span><span>編集</span></div></div>
+      </a>
+      <a class="work" data-c="ent" href="https://youtu.be/OhgfZg90jeU" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/OhgfZg90jeU/hqdefault.jpg)"><span class="kind">イベントOP</span></div>
+        <div class="body"><div class="ch">渋谷ヨシモト∞ドーム</div><h3>「提案クラシックス」ライブ公演のオープニングVTR</h3><div class="role"><span>構成</span><span>編集</span></div></div>
+      </a>
     </div>
   </div>
 </section>
@@ -189,7 +251,7 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
 <section id="results">
   <div class="wrap">
     <div class="sec-head"><div class="en">RESULTS</div><h2>運用実績の一例</h2><p>チャンネルの立ち上げから運用・制作まで担当した例です。</p></div>
-    <h3 class="works-sub" style="margin-top:0">crifaでの実績</h3>
+    <h3 class="works-sub" style="margin-top:0">独立してからの実績（株式会社クリファ）</h3>
     <div class="grid2">
       <a class="result result-link" href="https://www.youtube.com/@naco-do-l6w" target="_blank" rel="noopener">
         <div class="tag">成約</div>
@@ -248,78 +310,27 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
   </div>
 </section>
 
-<section id="works">
+<section id="strength">
   <div class="wrap">
-    <div class="sec-head"><div class="en">WORKS</div><h2>制作実績</h2><p>カードを押すとYouTubeが開きます。</p></div>
-
-    <div class="filter" role="group" aria-label="絞り込み">
-      <button type="button" data-f="all" aria-pressed="true">すべて</button>
-      <button type="button" data-f="biz">ビジネス・採用</button>
-      <button type="button" data-f="life">婚活・ライフスタイル</button>
-      <button type="button" data-f="ent">バラエティ・ドキュメンタリー</button>
-    </div>
-
-    <div class="works" id="works-grid">
-      <a class="work" data-c="biz" href="https://www.youtube.com/playlist?list=PL8lZLH937WYQcz5hZ7xUD9Tt-wm_ZX0kH" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/N2J22MVPoHY/hqdefault.jpg)"><span class="kind">再生リスト</span></div>
-        <div class="body"><div class="ch">運用と制作の両方を担当</div><h3>企業チャンネルの運用・制作</h3><p>スタートアップ投資TV、SESチャンネル、なこーど婚活応援チャンネル、TLDチャンネル ほか</p><div class="role"><span>運用</span><span>企画</span><span>制作</span></div></div>
-      </a>
-      <a class="work" data-c="life" href="https://www.youtube.com/@nanakoufujisaki/videos" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/npmpAzYxClc/hqdefault.jpg)"><span class="kind">チャンネル</span></div>
-        <div class="body"><div class="ch">旅する藤崎奈々子</div><h3>タレント藤崎奈々子さんの公式チャンネル</h3><p>旅・美容など女性向けのライフスタイル。テロップと構成の雛形づくりから担当し、いまも同じ雛形で続いています</p><div class="role"><span>雛形づくり</span><span>編集</span><span>サムネイル</span><span>バナー</span></div></div>
-      </a>
-      <a class="work" data-c="life" href="https://www.youtube.com/@ure_aka/videos" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/zitbxeaZnUE/hqdefault.jpg)"><span class="kind">チャンネル</span></div>
-        <div class="body"><div class="ch">売れたら垢抜けるってホント?</div><h3>男性向けの垢抜け企画のチャンネル</h3><p>株式会社FANY様。芸人さんの垢抜けをテーマにしたバラエティ</p><div class="role"><span>動画デザイン</span><span>サムネイル</span><span>バナー</span></div></div>
-      </a>
-      <a class="work" data-c="life" href="https://www.youtube.com/watch?v=8GEsArygAqE" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/8GEsArygAqE/hqdefault.jpg)"></div>
-        <div class="body"><div class="ch">wakatte TV</div><h3>【結婚×学歴】婚活市場で学歴はどこまで通用するのか</h3><div class="role"><span>制作</span></div></div>
-      </a>
-      <a class="work" data-c="life" href="https://youtu.be/s-YxODK7fLE" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/s-YxODK7fLE/hqdefault.jpg)"></div>
-        <div class="body"><div class="ch">なこーど婚活応援チャンネル</div><h3>連盟のデータから、結婚相談所で成婚できない人の共通点</h3><p>立ち上げ・運用から担当（開始4か月で月10件以上の成約）</p><div class="role"><span>運用</span><span>制作</span></div></div>
-      </a>
-      <a class="work" data-c="biz" href="https://youtu.be/GrwSueTDwzw" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GrwSueTDwzw/hqdefault.jpg)"></div>
-        <div class="body"><div class="ch">TLDチャンネル</div><h3>【習慣と環境】トップセールスに共通する特徴</h3><div class="role"><span>編集</span></div></div>
-      </a>
-      <a class="work" data-c="biz" href="https://youtu.be/xo3nvlI6Zl0" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/xo3nvlI6Zl0/hqdefault.jpg)"></div>
-        <div class="body"><div class="ch">こうすけ【軽貨物で成り上がり】</div><h3>2人分の荷物を1人で検証してみました</h3><p>求人のためのチャンネル。立ち上げ・運用から担当（開始1か月で採用に成功）</p><div class="role"><span>運用</span><span>制作</span></div></div>
-      </a>
-      <a class="work" data-c="biz" href="https://www.youtube.com/watch?v=GQAWiEGA6Hs" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GQAWiEGA6Hs/hqdefault.jpg)"></div>
-        <div class="body"><div class="ch">加藤ゼミナール</div><h3>令和5年 司法試験合格発表</h3><div class="role"><span>制作</span></div></div>
-      </a>
-    </div>
-
-    <h3 class="works-sub">前職（エンジニアスクール）での制作</h3>
-    <div class="works" id="works-grid-2">
-      <a class="work" data-c="biz" href="https://youtu.be/9pe61twIMjg" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/9pe61twIMjg/hqdefault.jpg)"><span class="kind">対談</span></div>
-        <div class="body"><div class="ch">ディープロ 公式チャンネル</div><h3>未経験転職で面接前にやるべき4つの対策</h3><p>目的：スクールの認知と成約。経験者に対談形式で話してもらう企画</p><div class="role"><span>企画</span><span>構成</span><span>撮影</span><span>編集</span></div></div>
-      </a>
-      <a class="work" data-c="biz" href="https://youtu.be/RnoqYfBQ-_A" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/RnoqYfBQ-_A/hqdefault.jpg)"><span class="kind">説明会</span></div>
-        <div class="body"><div class="ch">ディープロ 公式チャンネル</div><h3>【コース紹介】Webエンジニア 就職達成プログラム</h3><p>目的：成約の増加。30代を中心に、年齢で迷う方へ向けた説明動画</p><div class="role"><span>構成</span><span>台本</span><span>撮影</span><span>編集</span></div></div>
-      </a>
-      <a class="work" data-c="biz" href="https://youtu.be/D8GfemEshGM" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/D8GfemEshGM/hqdefault.jpg)"><span class="kind">ライブ配信</span></div>
-        <div class="body"><div class="ch">ディープロ 公式チャンネル</div><h3>Python認定基礎試験 徹底解説（配信イベント）</h3><p>目的：自社教材の認知と購入。合格者に勉強法を語ってもらう配信</p><div class="role"><span>企画</span><span>構成</span><span>撮影</span><span>配信</span></div></div>
-      </a>
-      <a class="work" data-c="ent" href="https://youtu.be/Mhqfu3Bhsos" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/Mhqfu3Bhsos/hqdefault.jpg)"><span class="kind">バラエティ</span></div>
-        <div class="body"><div class="ch">よしもとアカデミー</div><h3>両隣の人の会話が入れ替わったら、ジョイマン高木はどんな反応をするのか？</h3><p>タレントのお二人にドッキリを仕掛ける検証企画</p><div class="role"><span>構成</span><span>撮影</span><span>編集</span></div></div>
-      </a>
-      <a class="work" data-c="ent" href="https://youtu.be/dPQrP1vUCGg" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/dPQrP1vUCGg/hqdefault.jpg)"><span class="kind">ドキュメンタリー</span></div>
-        <div class="body"><div class="ch">キノトビ アナザーストーリー</div><h3>キングオブコントに初挑戦するスクール生コンビに密着</h3><p>「なぜプロではない2人が1回戦を突破できたのか」を軸に構成</p><div class="role"><span>企画</span><span>構成</span><span>撮影</span><span>編集</span></div></div>
-      </a>
-      <a class="work" data-c="ent" href="https://youtu.be/OhgfZg90jeU" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/OhgfZg90jeU/hqdefault.jpg)"><span class="kind">イベントOP</span></div>
-        <div class="body"><div class="ch">渋谷ヨシモト∞ドーム</div><h3>「提案クラシックス」ライブ公演のオープニングVTR</h3><div class="role"><span>構成</span><span>編集</span></div></div>
-      </a>
+    <div class="sec-head"><div class="en">STRENGTH</div><h2>私の強み</h2></div>
+    <div class="grid3">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>20社以上の企業チャンネルを運用してきた経験</h3>
+        <p>前職のYouTube運用代行の会社で、20社以上の企業チャンネルを運用してきました。成功した例と、うまくいかなかった例の両方がケースごとにたまっています。</p>
+        <ul><li>メンズクリニック・デンタルクリニック</li><li>学習塾・SES企業・エンジニア採用</li><li>声優・VC・結婚相談所 など</li></ul>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3>成約までを考えた導線の設計</h3>
+        <p>事業会社でWeb担当を3年していた経験から、再生数だけでなく「問い合わせ・来店・採用」につながるチャンネル設計を考えます。</p>
+        <ul><li>YouTubeからサイトへの誘導と施策のご提案</li><li>アンケートやGoogleアナリティクスでの効果測定と分析</li></ul>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3>運用の目線を持った編集</h3>
+        <p>運用と制作の両方を担当してきたので、編集を担当するときも、チャンネル全体の狙いに合っているかを考えながら作ります。サムネイルや月1回の振り返りまで対応できます。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -340,10 +351,10 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
 
 <section id="flow">
   <div class="wrap">
-    <div class="sec-head"><div class="en">FLOW</div><h2>進め方</h2></div>
+    <div class="sec-head"><div class="en">FLOW</div><h2>お仕事の進め方</h2></div>
     <ol class="flow">
       <li><h3>ヒアリング</h3><p>チャンネルの目的、視聴者、参考の動画、決まりごとを伺います。</p></li>
-      <li><h3>1本目の制作</h3><p>1本目は代表の髙橋が自ら編集し、完成品をお見せします。仕上がりでご判断ください。</p></li>
+      <li><h3>1本目の制作</h3><p>1本目は私が自分で編集し、完成品をお見せします。仕上がりでご判断ください。</p></li>
       <li><h3>確認と修正</h3><p>書き出した版ごとに秒数つきでご指摘をいただき、直して版を重ねます。</p></li>
       <li><h3>決まりとして残す</h3><p>いただいたご指摘はチャンネルの決まりとして残し、次の回から反映します。</p></li>
     </ol>
@@ -352,13 +363,10 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
 
 <section id="about">
   <div class="wrap">
-    <div class="sec-head"><div class="en">ABOUT</div><h2>代表</h2></div>
-    <div class="about">
-      <img src="img/profile.jpg" alt="代表 髙橋弘嗣" width="200" height="200">
+    <div class="sec-head"><div class="en">CAREER</div><h2>経歴</h2></div>
+    <div class="about about-solo">
       <div>
-        <h3>髙橋 弘嗣</h3>
-        <div class="role-line">株式会社クリファ 代表取締役／YouTubeディレクター</div>
-        <p>エンジニアスクールを運営するIT企業で、人材紹介事業の立ち上げ、Web担当、動画事業の立ち上げを経験しました。その後、YouTube運用代行の会社でディレクター・PMとして企業チャンネルの運用と制作に携わり、2025年に株式会社クリファを設立しました。</p>
+        <p>エンジニアスクールを運営するIT企業で、人材紹介事業の立ち上げ、Web担当、動画事業の立ち上げを経験しました。その後、YouTube運用代行の会社でディレクター・PMとして企業チャンネルの運用と制作に携わり、2025年に独立し、株式会社クリファを設立しました。いまはディレクターと編集者のチームで、企業や個人の方のYouTubeの編集と運用をお受けしています。</p>
         <ul class="timeline">
           <li><b>株式会社ダイビック（DIVE INTO CODE）</b><span>人材紹介事業の立ち上げ、Web担当・プロダクトオーナー。自社YouTubeチャンネルを2つ立ち上げ、動画203本・教育コンテンツ49本の制作とライブ配信を担当</span></li>
           <li><b>株式会社Suneight</b><span>YouTubeディレクター・PM。企業チャンネルの立ち上げ・運用・広告動画の制作。「令和の虎」の制作にも参加</span></li>
@@ -371,14 +379,14 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="sec-head"><div class="en">CONTACT</div><h2>お問い合わせ</h2><p>編集のみのご依頼から、チャンネルの立ち上げ・運用のご相談まで、お気軽にご連絡ください。</p></div>
+    <div class="sec-head"><div class="en">CONTACT</div><h2>お問い合わせ</h2><p>編集のご依頼や、チャンネルのご相談など、お気軽にご連絡ください。</p></div>
     <a class="mail" href="mailto:office@crifa.co.jp">office@crifa.co.jp</a>
     <a class="site" href="https://crifa.co.jp/" target="_blank" rel="noopener">株式会社クリファ 公式サイト（料金プラン・無料相談） → crifa.co.jp</a>
   </div>
 </section>
 </main>
 
-<footer>© crifa Inc.</footer>
+<footer>© Hirotsugu Takahashi ／ crifa Inc.</footer>
 
 <script>
 document.querySelectorAll('.filter button').forEach(function(b){
