@@ -278,6 +278,18 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 .tl:nth-child(5){animation-delay:.65s}.tl:nth-child(6){animation-delay:.75s}.tl:nth-child(7){animation-delay:.85s}.tl:nth-child(8){animation-delay:.95s}
 @media(prefers-reduced-motion:reduce){.tl{animation:none;opacity:1;transform:none}}
 @media(max-width:560px){.tools-list{gap:10px}.tl{width:58px}.tl-ic{width:46px;height:46px;font-size:18px}}
+
+.sec-head.center{text-align:center}
+.tool-player{max-width:880px;margin:0 auto}
+.tool-poster{position:relative;display:block;width:100%;padding:0;border:0;background:#000;cursor:pointer;border-radius:14px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 30px 60px -30px rgba(18,99,108,.55)}
+.tool-poster img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.tool-poster:hover img{transform:scale(1.02)}
+.tool-play{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(2,154,170,.45)}
+.tool-play svg{width:38px;height:38px;margin-left:5px}
+.tool-sec{position:absolute;right:14px;bottom:14px;background:rgba(0,0,0,.72);color:#fff;font-size:13px;font-weight:700;padding:3px 10px;border-radius:6px;font-family:Arial,sans-serif}
+.tool-player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:14px}
+.tool-cap{text-align:center;margin-top:14px;font-size:14px;color:var(--sub)}
+#tool .tool-dev{max-width:880px;margin:28px auto 0}
 </style>
 </head>
 <body>
@@ -546,20 +558,16 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 
 <section id="tool">
   <div class="wrap">
-    <div class="sec-head"><div class="en">TOOL</div><h2>自社開発の動画チェックアプリ「Vcheckくん」</h2><p>コンセプトは「70歳の方でも使える、音声対話型の編集ツール」。確認と修正のやり取りを、声とページひとつで終わらせるために自社で開発しました。</p></div>
-    <div class="tool">
-      <div class="tool-media"><div class="tool-video"><iframe src="https://www.youtube-nocookie.com/embed/5pi0E_On9Q8?rel=0" title="Vcheckくんの使い方（45秒）" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p class="tool-cap">▶ 45秒でわかる、Vcheckくんの使い方</p></div>
-      <div class="tool-body">
-        <p>書き出した動画は、Vcheckくんのページでご確認いただきます。直したい場面で止めて一言書くだけで、時刻は自動で入ります。タイムスタンプを書き出す手間はありません。</p>
-        <ul class="tool-list">
-          <li><b>声で伝えられる</b><span>キーボードが苦手な方も、話すだけで修正の指示を入れられます</span></li>
-          <li><b>止めた場面にコメント</b><span>時刻が自動で入るので、どこの話かずれません</span></li>
-          <li><b>画面に直接描ける</b><span>ペン・矢印・四角・文字で「ここをこう」と伝えられます</span></li>
-                    <li><b>登録もインストールも不要</b><span>URLを開くだけ。スマホからも使えます</span></li>
-        </ul>
-        <p class="tool-dev">こうした業務用のWebアプリも、自社で企画・開発しています。「動画まわりのこの作業を楽にしたい」というご相談もお受けします。</p>
-      </div>
+    <div class="sec-head center"><div class="en">TOOL</div><h2>自社開発の動画チェックアプリ「Vcheckくん」</h2><p>コンセプトは「70歳の方でも使える、音声対話型の編集ツール」。<br>編集をご依頼いただいたお客様には、セットで無償でご提供しています。</p></div>
+    <div class="tool-player">
+      <button type="button" class="tool-poster" id="vcheckPlay" aria-label="Vcheckくんの使い方の動画を再生（45秒）">
+        <img src="img/vcheck-poster.jpg" alt="Vcheckくんの使い方の動画" width="1280" height="720" loading="lazy">
+        <span class="tool-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#fff"/></svg></span>
+        <span class="tool-sec">0:45</span>
+      </button>
     </div>
+    <p class="tool-cap">45秒でわかる、Vcheckくんの使い方</p>
+    <p class="tool-dev">こうした業務用のWebアプリも、自社で企画・開発しています。「動画まわりのこの作業を楽にしたい」というご相談もお受けします。</p>
   </div>
 </section>
 
@@ -582,6 +590,9 @@ document.querySelectorAll('.filter button').forEach(function(b){
     document.querySelectorAll('.work').forEach(function(w){w.style.display=(f==='all'||w.dataset.c===f)?'':'none'});
   });
 });
+
+var vp=document.getElementById('vcheckPlay');
+if(vp){vp.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/5pi0E_On9Q8?autoplay=1&rel=0&playsinline=1';f.title='Vcheckくんの使い方（45秒）';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;vp.replaceWith(f);});}
 </script>
 </body>
 </html>
