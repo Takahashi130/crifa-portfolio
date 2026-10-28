@@ -261,6 +261,9 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
   .kv-btn{min-width:0;flex:1 1 100%}
   .plus{display:none}
 }
+.tool-video{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:0 24px 48px -26px rgba(18,99,108,.5);background:#000}
+.tool-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.tool-cap{margin-top:10px;font-size:13px;color:var(--sub);text-align:center}
 </style>
 </head>
 <body>
@@ -530,7 +533,7 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
   <div class="wrap">
     <div class="sec-head"><div class="en">TOOL</div><h2>自社開発の動画チェックアプリ「Vcheckくん」</h2><p>コンセプトは「70歳の方でも使える、音声対話型の編集ツール」。確認と修正のやり取りを、声とページひとつで終わらせるために自社で開発しました。</p></div>
     <div class="tool">
-      <img class="tool-shot" src="img/vcheck.jpg" alt="Vcheckくんの画面" width="1280" height="760" loading="lazy">
+      <div class="tool-media"><div class="tool-video"><iframe src="https://www.youtube-nocookie.com/embed/5pi0E_On9Q8?rel=0" title="Vcheckくんの使い方（45秒）" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p class="tool-cap">▶ 45秒でわかる、Vcheckくんの使い方</p></div>
       <div class="tool-body">
         <p>書き出した動画は、Vcheckくんのページでご確認いただきます。直したい場面で止めて一言書くだけで、時刻は自動で入ります。タイムスタンプを書き出す手間はありません。</p>
         <ul class="tool-list">
