@@ -140,16 +140,8 @@ html.js .rv.in{opacity:1;transform:none}
 .mb-text{flex:1 1 300px;font-weight:700;font-size:15px}
 .mb-more{color:var(--teal-d);font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px}
 .mb-more svg{width:16px;height:16px}
-.band-wrap{background:#fff;padding:0 24px 0}
+.band-wrap{background:#fff;padding:0 24px 64px}
 
-/* 流れる帯（mof-mof の partners-loop の作り方） */
-.loop{overflow:hidden;padding:56px 0 8px;background:#fff}
-.loop-track{display:flex;width:max-content;animation:loop 60s linear infinite}
-.loop-set{display:flex;gap:48px;padding-right:48px}
-.loop img{width:192px;height:108px;object-fit:cover;border-radius:8px}
-@keyframes loop{to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.loop-track{animation:none}}
-@media(max-width:760px){.loop{display:none}}
 
 /* ===== works（mof-mof の Works カード） ===== */
 .filter{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:-32px 0 56px}
@@ -391,7 +383,6 @@ html.js .rv.in{opacity:1;transform:none}
   <a class="monitor-band" href="#monitor"><span class="mb-tag">募集中</span><span class="mb-text">実績づくりのため、モニターを募集しています（AI編集：残り1社／ホームページ制作：残り2社）</span><span class="mb-more">くわしく見る<svg><use href="#i-arrow"/></svg></span></a>
 </div>
 
-<div class="loop" aria-hidden="true"><div class="loop-track" id="loop-track"></div></div>
 
 <section id="works" class="sec gray">
   <span class="deco ring" style="width:400px;height:400px;right:-210px;top:-150px"></span>
@@ -777,14 +768,6 @@ html.js .rv.in{opacity:1;transform:none}
 <footer class="ft"><div class="container"><img src="../img/crifa-logo.svg" alt="crifa" width="80" height="30"><small>© Hirotsugu Takahashi ／ crifa Inc.</small></div></footer>
 
 <script>
-// 流れる帯：制作した動画のサムネイルを並べる
-(function(){
-  var t=document.getElementById('loop-track');if(!t)return;
-  var srcs=[].map.call(document.querySelectorAll('#works-grid .thumb i, #works-grid-2 .thumb i'),function(i){return i.style.backgroundImage.replace(/^url\(["']?|["']?\)$/g,'');});
-  var set=function(){var d=document.createElement('div');d.className='loop-set';srcs.forEach(function(s){var im=document.createElement('img');im.src=s;im.alt='';im.loading='lazy';im.width=192;im.height=108;d.appendChild(im);});return d;};
-  t.appendChild(set());t.appendChild(set());
-})();
-
 // 絞り込み（制作した動画の中だけ）
 document.querySelectorAll('#works .filter button').forEach(function(b){
   b.addEventListener('click',function(){
