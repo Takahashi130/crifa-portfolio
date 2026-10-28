@@ -281,6 +281,7 @@ html.js .rv.in{opacity:1;transform:none}
 
 /* ===== monitor ===== */
 .mon{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+.mon.one{grid-template-columns:1fr;max-width:760px;margin-left:auto;margin-right:auto}
 @media(max-width:1000px){.mon{grid-template-columns:1fr}}
 .mon-card{padding:32px;border-top:6px solid var(--teal)}
 .mon-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
@@ -380,7 +381,7 @@ html.js .rv.in{opacity:1;transform:none}
 </div>
 
 <div class="band-wrap">
-  <a class="monitor-band" href="#monitor"><span class="mb-tag">募集中</span><span class="mb-text">実績づくりのため、モニターを募集しています（AI編集：残り1社／ホームページ制作：残り2社）</span><span class="mb-more">くわしく見る<svg><use href="#i-arrow"/></svg></span></a>
+  <a class="monitor-band" href="#monitor"><span class="mb-tag">募集中</span><span class="mb-text">実績づくりのため、モニターを募集しています（AI編集：残り1社）</span><span class="mb-more">くわしく見る<svg><use href="#i-arrow"/></svg></span></a>
 </div>
 
 
@@ -693,8 +694,8 @@ html.js .rv.in{opacity:1;transform:none}
   <span class="deco ring" style="width:400px;height:400px;left:-240px;top:-140px"></span>
   <span class="deco dotgrid" style="width:290px;height:95px;right:-40px;bottom:80px"></span>
   <div class="container">
-    <header class="ttl rv"><div class="en">Monitor</div><h2>実績づくりのためのモニター募集（各2社まで）</h2><p>新しいサービスの実績をつくるため、条件つきで特別にお受けしています。</p></header>
-    <div class="mon">
+    <header class="ttl rv"><div class="en">Monitor</div><h2>実績づくりのためのモニター募集（2社まで）</h2><p>新しいサービスの実績をつくるため、条件つきで特別にお受けしています。</p></header>
+    <div class="mon one">
       <div class="wcard mon-card rv">
         <div class="mon-head"><span class="mon-label">AI編集</span><span class="mon-left">残り1社</span></div>
         <p class="mon-price"><b>5本 50,000円</b><small>（税別・1本あたり10,000円）</small></p>
@@ -709,6 +710,7 @@ html.js .rv.in{opacity:1;transform:none}
           <li class="mon-bonus">選べる特典つき：ショート動画5本・アイキャッチ制作・企画のご提案・制作の相談（オンライン45分）などから、毎月1つお選びいただけます</li>
         </ul>
       </div>
+      <!-- ホームページ制作のモニター（2026-10-28 いったん非表示。戻すときはこのコメントを外し、帯・見出し・フォームの選択肢も戻す）
       <div class="wcard mon-card rv">
         <div class="mon-head"><span class="mon-label">ホームページ制作</span><span class="mon-left">残り2社</span></div>
         <p class="mon-price"><b>制作費 0円</b><small>（ドメイン・サーバー代は実費）</small></p>
@@ -722,6 +724,7 @@ html.js .rv.in{opacity:1;transform:none}
           <li>修正は2回まで。会員ページ・予約・ネットショップなどの仕組みは対象外</li>
         </ul>
       </div>
+      -->
     </div>
     <div class="wcard mon-cond rv">
       <h3>モニターの条件（共通）</h3>
@@ -750,7 +753,7 @@ html.js .rv.in{opacity:1;transform:none}
           <option value="">選んでください</option>
           <option>動画編集のご依頼・ご相談</option>
           <option>AI編集のモニターに申し込みたい</option>
-          <option>ホームページ制作のモニターに申し込みたい</option>
+          <!-- <option>ホームページ制作のモニターに申し込みたい</option> -->
           <option>YouTube運用のご相談</option>
           <option>その他</option>
         </select></div>
