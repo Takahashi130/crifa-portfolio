@@ -192,6 +192,32 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 .hero-collage{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:min(460px,86vw);transform:rotate(-3deg)}
 .hero-collage img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:10px;box-shadow:0 18px 36px -18px rgba(18,99,108,.55)}
 .hero-collage img:nth-child(2),.hero-collage img:nth-child(4){transform:translateY(22px)}
+
+/* hero mof */
+.hero.mof{position:relative;padding:0;overflow:hidden;background-color:#fff;background-image:linear-gradient(rgba(2,154,170,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(2,154,170,.05) 1px,transparent 1px);background-size:36px 36px}
+.arc{position:absolute;border-radius:50%;border:56px solid var(--light);pointer-events:none}
+.arc-1{width:520px;height:520px;left:-330px;top:-300px}
+.arc-2{width:620px;height:620px;right:-380px;top:120px}
+.hero-mof{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;min-height:640px;padding-top:56px;padding-bottom:64px}
+@media(max-width:900px){.hero-mof{grid-template-columns:1fr;min-height:0;padding-top:36px}}
+.headline{font-size:clamp(40px,6vw,72px);line-height:1.28;font-weight:800;color:#2b3436;letter-spacing:.06em;margin:0}
+.headline .hl{color:var(--teal);background:linear-gradient(transparent 68%,var(--yellow) 68%,var(--yellow) 92%,transparent 92%);padding:0 4px}
+.hero .lead{margin-top:26px;font-size:16px;max-width:520px;color:var(--text);letter-spacing:.04em}
+.mof-btns{margin-top:34px;gap:24px}
+.btn-mof{display:inline-flex;align-items:center;justify-content:center;min-width:220px;height:66px;padding:0 28px;border-radius:4px;background:var(--teal);border:1px solid var(--teal);color:#fff;font-weight:700;font-size:17px;text-decoration:none;letter-spacing:.06em;transition:opacity .15s}
+.btn-mof.ghost{background:#fff;color:var(--teal)}
+.btn-mof:hover{opacity:.82}
+@media(max-width:520px){.btn-mof{min-width:0;flex:1 1 100%}}
+.hero-mof .hero-nums{margin-top:36px}
+.hero-photos{position:relative;height:560px}
+@media(max-width:900px){.hero-photos{height:min(420px,95vw);order:-1}}
+.ph{position:absolute;object-fit:cover;border-radius:16px;box-shadow:0 20px 40px -24px rgba(18,99,108,.5)}
+.ph-main{width:78%;aspect-ratio:4/3;height:auto;right:4%;top:15%;z-index:2}
+.ph-top{width:34%;aspect-ratio:4/3;height:auto;right:-2%;top:0;z-index:3}
+.ph-bottom{width:52%;aspect-ratio:16/9;height:auto;left:0;bottom:2%;z-index:4}
+.plus{position:absolute;left:4%;top:6%;width:180px;height:240px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34'%3E%3Cpath d='M17 9v16M9 17h16' stroke='%23029aaa' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") 0 0/34px 34px;z-index:1;-webkit-mask-image:linear-gradient(200deg,#000 40%,transparent);mask-image:linear-gradient(200deg,#000 40%,transparent)}
+.dots{position:absolute;right:0;bottom:-10px;width:160px;height:110px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='4' cy='4' r='2.2' fill='%23029aaa'/%3E%3C/svg%3E") 0 0/22px 22px;z-index:1;opacity:.8}
+@media(max-width:900px){.plus{width:120px;height:160px}.dots{display:none}}
 </style>
 </head>
 <body>
@@ -211,27 +237,27 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 </header>
 
 <main>
-<div class="hero">
-  <div class="wrap hero-split">
+<div class="hero mof">
+  <span class="arc arc-1" aria-hidden="true"></span><span class="arc arc-2" aria-hidden="true"></span>
+  <div class="wrap hero-mof">
     <div class="hero-text">
-      <div class="kicker en">PORTFOLIO</div>
-      <h1>髙橋 弘嗣<small class="en">Hirotsugu Takahashi</small></h1>
-      <p class="catch">成果にコミットする動画を。</p>
-      <div class="hero-role"><span class="nb">YouTubeディレクター・動画編集</span>／<span class="nb">株式会社クリファ 代表</span></div>
+      <h1 class="headline"><span class="hl">成果</span>に<br>コミットする<br>動画を。</h1>
+      <p class="lead">YouTubeディレクター・動画編集の髙橋弘嗣です。企業チャンネルを40社以上運用してきた経験から、問い合わせや採用につながる動画をつくります。</p>
+      <div class="btns mof-btns"><a class="btn-mof" href="#works">制作した動画を見る</a><a class="btn-mof ghost" href="#contact">お問い合わせ</a></div>
       <ul class="hero-nums">
         <li><b>40<small>社以上</small></b><span>運用した企業チャンネル</span></li>
         <li><b>18<small>万人</small></b><span>登録者まで伸ばしたチャンネル</span></li>
         <li><b>4<small>年以上</small></b><span>YouTubeの制作・運用</span></li>
       </ul>
-      <div class="btns"><a class="cta" href="#works"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor" opacity=".18"/><path d="M10 8.2v7.6l6-3.8z" fill="currentColor"/></svg>制作した動画を見る</a><a class="cta ghost" href="#contact"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M4.5 7.5l7.5 5.5 7.5-5.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>お問い合わせ</a></div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-collage"><img src="https://i.ytimg.com/vi/npmpAzYxClc/hqdefault.jpg" alt="" width="480" height="360"><img src="https://i.ytimg.com/vi/8GEsArygAqE/hqdefault.jpg" alt="" width="480" height="360"><img src="https://i.ytimg.com/vi/GrwSueTDwzw/hqdefault.jpg" alt="" width="480" height="360"><img src="https://i.ytimg.com/vi/N2J22MVPoHY/hqdefault.jpg" alt="" width="480" height="360"></div>
-      <div class="hero-badge"><span class="en">YouTube</span>企画・編集・運用</div>
+    <div class="hero-photos" aria-hidden="true">
+      <span class="plus"></span>
+      <img class="ph ph-main" src="img/scene-shoot.jpg" alt="" width="960" height="720">
+      <img class="ph ph-top" src="img/scene-edit.jpg" alt="" width="640" height="480">
+      <img class="ph ph-bottom" src="img/scene-live.jpg" alt="" width="640" height="360">
+      <span class="dots"></span>
     </div>
   </div>
-  <div class="reel reel-a"><div class="reel-track"><img src="https://i.ytimg.com/vi/npmpAzYxClc/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/zitbxeaZnUE/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/N2J22MVPoHY/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/8GEsArygAqE/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/s-YxODK7fLE/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/GrwSueTDwzw/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/xo3nvlI6Zl0/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/Mhqfu3Bhsos/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/dPQrP1vUCGg/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/npmpAzYxClc/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/zitbxeaZnUE/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/N2J22MVPoHY/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/8GEsArygAqE/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/s-YxODK7fLE/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/GrwSueTDwzw/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/xo3nvlI6Zl0/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/Mhqfu3Bhsos/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/dPQrP1vUCGg/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></div></div>
-  <div class="reel reel-b"><div class="reel-track"><img src="https://i.ytimg.com/vi/0OGzoLbANlo/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/W6Gzzm-U_XQ/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/rb7yTnrCjBY/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/GQAWiEGA6Hs/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/9pe61twIMjg/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/RnoqYfBQ-_A/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/D8GfemEshGM/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/OhgfZg90jeU/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/MX8v0osunA8/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/0OGzoLbANlo/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/W6Gzzm-U_XQ/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/rb7yTnrCjBY/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/GQAWiEGA6Hs/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/9pe61twIMjg/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/RnoqYfBQ-_A/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/D8GfemEshGM/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/OhgfZg90jeU/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><img src="https://i.ytimg.com/vi/MX8v0osunA8/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></div></div>
 </div>
 
 <section id="works">
