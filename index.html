@@ -367,6 +367,21 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 .mon-cond ol li{margin:4px 0}
 .mon-list li.mon-bonus{background:#fffde0;border-radius:6px;padding:8px 10px 8px 34px}
 .mon-list li.mon-bonus::before{left:10px;top:12px;background-color:#d9a400}
+
+/* contact form（つなぎ：メールアプリで送る） */
+.cform{max-width:720px;background:#fff;color:var(--text);border-radius:12px;padding:28px 28px 22px;margin-top:8px}
+.cf-row{display:grid;grid-template-columns:200px 1fr;gap:12px;align-items:start;margin-bottom:14px}
+@media(max-width:640px){.cf-row{grid-template-columns:1fr;gap:6px}.cform{padding:22px 18px}}
+.cf-row label{font-weight:700;font-size:14px;color:var(--ink);padding-top:10px}
+.cf-row label em{font-style:normal;background:var(--teal);color:#fff;font-size:11px;border-radius:4px;padding:1px 6px;margin-left:8px;vertical-align:1px}
+.cform input,.cform select,.cform textarea{width:100%;font:inherit;font-size:16px;border:1px solid #cbd5e1;border-radius:6px;padding:10px 12px;background:#fff;color:var(--ink)}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+.cf-err{color:#c2410c;font-size:14px;min-height:1em;margin:4px 0 8px}
+.cf-send{display:block;width:100%;max-width:320px;margin:0 auto;height:56px;border:0;border-radius:6px;background:var(--teal);color:#fff;font:inherit;font-size:17px;font-weight:700;cursor:pointer}
+.cf-send:hover{opacity:.85}
+.cf-help{font-size:12px;color:var(--sub);margin-top:12px;text-align:center}
+.mail-inline{color:var(--teal-dark)}
+.contact .site{margin-top:28px}
 </style>
 </head>
 <body>
@@ -737,7 +752,25 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 <section id="contact" class="contact">
   <div class="wrap">
     <div class="sec-head"><div class="en">CONTACT</div><h2>お問い合わせ</h2><p>編集のご依頼や、チャンネルのご相談など、お気軽にご連絡ください。</p></div>
-    <a class="mail" href="mailto:office@crifa.co.jp">office@crifa.co.jp</a>
+    <form class="cform" id="cform" novalidate>
+      <div class="cf-row"><label for="cf-name">お名前<em>必須</em></label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="cf-row"><label for="cf-company">会社名・チャンネル名</label><input id="cf-company" name="company" type="text" autocomplete="organization"></div>
+      <div class="cf-row"><label for="cf-email">メールアドレス<em>必須</em></label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="cf-row"><label for="cf-kind">ご用件<em>必須</em></label>
+        <select id="cf-kind" name="kind" required>
+          <option value="">選んでください</option>
+          <option>動画編集のご依頼・ご相談</option>
+          <option>AI編集のモニターに申し込みたい</option>
+          <option>ホームページ制作のモニターに申し込みたい</option>
+          <option>YouTube運用のご相談</option>
+          <option>その他</option>
+        </select></div>
+      <div class="cf-row"><label for="cf-url">チャンネル・サイトのURL</label><input id="cf-url" name="url" type="url" placeholder="https://"></div>
+      <div class="cf-row"><label for="cf-msg">ご相談の内容<em>必須</em></label><textarea id="cf-msg" name="msg" rows="5" required></textarea></div>
+      <p class="cf-err" id="cf-err" role="alert"></p>
+      <button class="cf-send" type="submit">内容を確認して送る</button>
+      <p class="cf-help">送るボタンを押すと、お使いのメールアプリが開き、宛先と内容が入った状態になります。そのまま送信してください。メールアプリが開かない場合は <a class="mail-inline" href="mailto:office@crifa.co.jp">office@crifa.co.jp</a> へ直接お送りください。</p>
+    </form>
     <a class="site" href="https://crifa.co.jp/" target="_blank" rel="noopener">株式会社クリファ 公式サイト（料金プラン・無料相談） → crifa.co.jp</a>
   </div>
 </section>
@@ -756,6 +789,26 @@ document.querySelectorAll('.filter button').forEach(function(b){
 
 var vp=document.getElementById('vcheckPlay');
 if(vp){vp.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/5pi0E_On9Q8?autoplay=1&rel=0&playsinline=1';f.title='Vcheckくんの使い方（45秒）';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;vp.replaceWith(f);});}
+
+var cf=document.getElementById('cform');
+if(cf){cf.addEventListener('submit',function(e){e.preventDefault();
+  var g=function(id){return document.getElementById(id).value.trim();};
+  var name=g('cf-name'),email=g('cf-email'),kind=g('cf-kind'),msg=g('cf-msg'),company=g('cf-company'),url=g('cf-url');
+  var err=document.getElementById('cf-err');
+  if(!name||!email||!kind||!msg){err.textContent='必須の項目を入れてください。';return;}
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent='メールアドレスの形を確かめてください。';return;}
+  err.textContent='';
+  var body='お名前：'+name+'
+会社名・チャンネル名：'+(company||'-')+'
+メールアドレス：'+email+'
+ご用件：'+kind+'
+URL：'+(url||'-')+'
+
+'+msg+'
+
+（ポートフォリオサイトのフォームから）';
+  location.href='mailto:office@crifa.co.jp?subject='+encodeURIComponent('【お問い合わせ】'+kind+'（'+name+'様）')+'&body='+encodeURIComponent(body);
+});}
 </script>
 </body>
 </html>
