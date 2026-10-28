@@ -218,6 +218,49 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 .plus{position:absolute;left:4%;top:6%;width:180px;height:240px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34'%3E%3Cpath d='M17 9v16M9 17h16' stroke='%23029aaa' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") 0 0/34px 34px;z-index:1;-webkit-mask-image:linear-gradient(200deg,#000 40%,transparent);mask-image:linear-gradient(200deg,#000 40%,transparent)}
 .dots{position:absolute;right:0;bottom:-10px;width:160px;height:110px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='4' cy='4' r='2.2' fill='%23029aaa'/%3E%3C/svg%3E") 0 0/22px 22px;z-index:1;opacity:.8}
 @media(max-width:900px){.plus{width:120px;height:160px}.dots{display:none}}
+
+/* tool */
+.tool{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center}
+@media(max-width:900px){.tool{grid-template-columns:1fr;gap:28px}}
+.tool-shot{width:100%;height:auto;border-radius:12px;box-shadow:0 24px 48px -26px rgba(18,99,108,.5);border:1px solid var(--line)}
+.tool-list{list-style:none;margin-top:20px;display:grid;gap:14px}
+.tool-list li{background:#fff;border-radius:8px;box-shadow:var(--shadow);padding:14px 18px 14px 46px;position:relative}
+.tool-list li::before{content:"";position:absolute;left:16px;top:18px;width:18px;height:18px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.tool-list b{display:block;color:var(--ink)}
+.tool-list span{font-size:14px;color:var(--sub)}
+.tool-dev{margin-top:20px;font-size:14px;color:var(--teal-dark);font-weight:500;border-left:3px solid var(--yellow);padding-left:12px}
+
+/* kv (mof-mof と同じ寸法) */
+.hero.mof{min-height:0}
+.kv{position:relative;max-width:1200px;margin:0 auto;padding:132px 20px 72px;display:grid;grid-template-columns:508px 1fr;gap:24px;align-items:start}
+.kv-text{position:relative;z-index:5;padding-top:0}
+.kv-title{font-size:64px;font-weight:700;line-height:1.4;letter-spacing:.085em;color:#333;margin:0}
+.kv-em{position:relative;color:#029aaa;z-index:0}
+.kv-em::before{content:"";position:absolute;left:0;bottom:6.4px;width:100%;height:40%;background:#f4f212;border-radius:4px;z-index:-1}
+.kv-lead{margin-top:32px;font-size:16px;line-height:1.7;letter-spacing:.04em;color:#333;max-width:508px}
+.kv-btns{display:flex;flex-wrap:wrap;gap:24px;margin-top:33px}
+.kv-btn{display:inline-flex;align-items:center;justify-content:center;min-width:200px;height:61px;padding:16px 24px;border:1px solid #029aaa;border-radius:6px;background:#029aaa;color:#fff;font-size:18px;font-weight:700;line-height:1.5;letter-spacing:.04em;text-decoration:none;transition:opacity .15s}
+.kv-btn.outline{background:#fff;color:#029aaa;font-weight:500}
+.kv-btn:hover{opacity:.8}
+.kv-photos{position:relative;height:600px}
+.kvp{position:absolute;object-fit:cover;border-radius:16px;height:auto}
+.kvp-center{width:548px;aspect-ratio:4/3;left:120px;top:68px;z-index:2}
+.kvp-lb{width:352px;aspect-ratio:3/2;left:-15px;top:352px;z-index:3}
+.kvp-rt{width:176px;aspect-ratio:3/2;right:-115px;top:-73px;z-index:3}
+.plus{left:20px;top:-30px}
+.hero.mof .dots{left:0;right:auto;bottom:0;top:auto;width:180px;height:120px;position:absolute}
+@media(max-width:1180px){
+  .kv{grid-template-columns:1fr;padding-top:48px;gap:40px}
+  .kv-photos{height:auto;aspect-ratio:4/3;max-width:640px;width:100%;margin:0 auto;order:-1}
+  .kvp-center{width:80%;left:10%;top:6%}
+  .kvp-lb{width:46%;left:0;top:auto;bottom:0}
+  .kvp-rt{width:30%;right:0;top:0}
+}
+@media(max-width:560px){
+  .kv-title{font-size:40px}
+  .kv-btn{min-width:0;flex:1 1 100%}
+  .plus{display:none}
+}
 </style>
 </head>
 <body>
@@ -239,23 +282,18 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 <main>
 <div class="hero mof">
   <span class="arc arc-1" aria-hidden="true"></span><span class="arc arc-2" aria-hidden="true"></span>
-  <div class="wrap hero-mof">
-    <div class="hero-text">
-      <h1 class="headline"><span class="hl">成果</span>に<br>コミットする<br>動画を。</h1>
-      <p class="lead">YouTubeディレクター・動画編集の髙橋弘嗣です。企業チャンネルを40社以上運用してきた経験から、問い合わせや採用につながる動画をつくります。</p>
-      <div class="btns mof-btns"><a class="btn-mof" href="#works">制作した動画を見る</a><a class="btn-mof ghost" href="#contact">お問い合わせ</a></div>
-      <ul class="hero-nums">
-        <li><b>40<small>社以上</small></b><span>運用した企業チャンネル</span></li>
-        <li><b>18<small>万人</small></b><span>登録者まで伸ばしたチャンネル</span></li>
-        <li><b>4<small>年以上</small></b><span>YouTubeの制作・運用</span></li>
-      </ul>
+  <span class="dots" aria-hidden="true"></span>
+  <div class="kv">
+    <div class="kv-text">
+      <h1 class="kv-title"><span class="kv-em">成果</span>を意識した<br>動画を。</h1>
+      <p class="kv-lead">YouTubeの編集と運用を、ディレクターと編集者のチームでお受けしています。40社以上のチャンネル運用で得た経験をもとに、見られて、成果につながる動画をつくります。</p>
+      <div class="kv-btns"><a class="kv-btn" href="#works">制作実績を見る</a><a class="kv-btn outline" href="#contact">お問い合わせ</a></div>
     </div>
-    <div class="hero-photos" aria-hidden="true">
+    <div class="kv-photos" aria-hidden="true">
       <span class="plus"></span>
-      <img class="ph ph-main" src="img/scene-shoot.jpg" alt="" width="960" height="720">
-      <img class="ph ph-top" src="img/scene-edit.jpg" alt="" width="640" height="480">
-      <img class="ph ph-bottom" src="img/scene-live.jpg" alt="" width="640" height="360">
-      <span class="dots"></span>
+      <img class="kvp kvp-center" src="img/kv-1.jpg" alt="" width="1096" height="822">
+      <img class="kvp kvp-lb" src="img/kv-2.jpg" alt="" width="704" height="468">
+      <img class="kvp kvp-rt" src="img/kv-3.jpg" alt="" width="352" height="234">
     </div>
   </div>
 </div>
@@ -459,7 +497,7 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
     <ol class="flow">
       <li><h3>ヒアリング</h3><p>チャンネルの目的、視聴者、参考の動画、決まりごとを伺います。</p></li>
       <li><h3>1本目の制作</h3><p>1本目は私が自分で編集し、完成品をお見せします。仕上がりでご判断ください。</p></li>
-      <li><h3>確認と修正</h3><p>書き出した版ごとに秒数つきでご指摘をいただき、直して版を重ねます。</p></li>
+      <li><h3>確認と修正</h3><p>書き出した版ごとに、自社開発の「Vcheckくん」で場面ごとにご指摘をいただき、直して版を重ねます。</p></li>
       <li><h3>決まりとして残す</h3><p>いただいたご指摘はチャンネルの決まりとして残し、次の回から反映します。</p></li>
     </ol>
   </div>
@@ -482,6 +520,26 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
           <li><b>株式会社Suneight</b><span>YouTubeディレクター・PM。企業チャンネルの立ち上げ・運用・広告動画の制作。「令和の虎」の制作にも参加</span></li>
           <li><b>株式会社クリファ（2025年10月〜）</b><span>独立して設立。ディレクターと編集者のチームで、企業や個人の方のYouTubeの編集と運用をお受けしています</span></li>
         </ul>
+        <p class="tool-dev">こうした業務用のWebアプリも、自社で企画・開発しています。「動画まわりのこの作業を楽にしたい」というご相談もお受けします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tool">
+  <div class="wrap">
+    <div class="sec-head"><div class="en">TOOL</div><h2>自社開発の動画チェックアプリ「Vcheckくん」</h2><p>コンセプトは「70歳の方でも使える、音声対話型の編集ツール」。確認と修正のやり取りを、声とページひとつで終わらせるために自社で開発しました。</p></div>
+    <div class="tool">
+      <img class="tool-shot" src="img/vcheck.jpg" alt="Vcheckくんの画面" width="1280" height="760" loading="lazy">
+      <div class="tool-body">
+        <p>書き出した動画は、Vcheckくんのページでご確認いただきます。直したい場面で止めて一言書くだけで、時刻は自動で入ります。タイムスタンプを書き出す手間はありません。</p>
+        <ul class="tool-list">
+          <li><b>声で伝えられる</b><span>キーボードが苦手な方も、話すだけで修正の指示を入れられます</span></li>
+          <li><b>止めた場面にコメント</b><span>時刻が自動で入るので、どこの話かずれません</span></li>
+          <li><b>画面に直接描ける</b><span>ペン・矢印・四角・文字で「ここをこう」と伝えられます</span></li>
+                    <li><b>登録もインストールも不要</b><span>URLを開くだけ。スマホからも使えます</span></li>
+        </ul>
+        <p class="tool-dev">こうした業務用のWebアプリも、自社で企画・開発しています。「動画まわりのこの作業を楽にしたい」というご相談もお受けします。</p>
       </div>
     </div>
   </div>
