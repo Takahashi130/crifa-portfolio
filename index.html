@@ -10,147 +10,155 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fbfaf7; --surface:#ffffff; --ink:#1d1d1f; --sub:#5f6168; --line:#e6e3dc;
-  --accent:#d9480f; --accent-soft:#fff1e8; --dark:#16181d;
+  --bg:#ffffff; --tint:#fbfefe; --surface:#ffffff; --ink:#203b3e; --text:#334155; --sub:#64748b; --line:#e2e8f0;
+  --teal:#029aaa; --teal-dark:#12636c; --cyan:#12d6df; --light:#e5f6f7; --yellow:#f0f135;
+  --shadow:0 0 20px -10px rgba(71,69,69,.3);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 img{max-width:100%;display:block}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-.en{font-family:Montserrat,sans-serif;letter-spacing:.08em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.en{font-family:"Barlow Condensed",sans-serif;font-weight:600}
 
 /* header */
-header{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-family:Montserrat,sans-serif;font-weight:700;font-size:20px;text-decoration:none;letter-spacing:.04em}
-.logo span{color:var(--accent)}
-nav a{font-size:13px;text-decoration:none;margin-left:22px;color:var(--sub)}
-nav a:hover{color:var(--accent)}
-@media(max-width:720px){nav{display:none}}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.logo img{height:30px;width:auto}
+.logo span{font-size:13px;font-weight:700;border-left:1px solid var(--line);padding-left:12px}
+nav{display:flex;align-items:center}
+nav a{font-family:"Barlow Condensed","Noto Sans JP",sans-serif;font-weight:500;font-size:15px;text-decoration:none;margin-left:22px;color:var(--teal)}
+nav a:hover{color:var(--teal-dark)}
+nav a.nav-cta{background:var(--yellow);color:var(--ink);border-radius:999px;padding:6px 20px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700}
+@media(max-width:860px){nav a:not(.nav-cta){display:none}}
+@media(max-width:420px){.logo span{display:none}}
 
 /* hero */
-.hero{padding:96px 0 80px}
-.hero .kicker{color:var(--accent);font-weight:700;font-size:13px}
-.hero h1{font-size:clamp(30px,5.2vw,52px);line-height:1.35;margin:14px 0 22px;font-weight:700;letter-spacing:.02em}
-.hero p{color:var(--sub);max-width:640px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
-.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 14px;font-size:13px}
-.cta{display:inline-block;margin-top:34px;background:var(--ink);color:#fff;text-decoration:none;padding:13px 28px;border-radius:6px;font-weight:700;font-size:14px}
-.cta:hover{background:var(--accent)}
+.hero{padding:88px 0;background-color:var(--tint);background-image:linear-gradient(rgba(2,154,170,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(2,154,170,.045) 1px,transparent 1px);background-size:32px 32px}
+.hero-grid{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero-grid .hero-photo{order:-1}}
+.hero-photo{width:280px;height:280px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:var(--shadow)}
+@media(max-width:820px){.hero-photo{width:150px;height:150px}}
+.hero .kicker{color:var(--teal);font-size:22px;letter-spacing:.06em}
+.hero h1{font-size:clamp(34px,5.4vw,52px);line-height:1.3;margin:4px 0 6px;font-weight:800;color:var(--ink);letter-spacing:.02em}
+.hero h1 small{display:block;font-family:"Barlow Condensed",sans-serif;font-size:22px;color:var(--sub);font-weight:600;letter-spacing:.04em}
+.hero-role{font-weight:700;color:var(--teal-dark);margin:10px 0 20px}
+.hero p{max-width:640px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{background:var(--light);color:var(--teal-dark);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.cta{display:inline-block;background:var(--teal-dark);border:1px solid var(--teal-dark);color:#fff;text-decoration:none;padding:14px 24px;border-radius:8px;font-weight:700;font-size:15px}
+.cta.ghost{background:#fff;color:var(--teal-dark)}
+.cta:hover{opacity:.85}
 
-.hero-grid{display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:center}
-@media(max-width:720px){.hero-grid{grid-template-columns:1fr;gap:24px}}
-.hero-photo{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
-@media(max-width:720px){.hero-photo{width:140px;height:140px}}
-.hero h1 small{display:block;font-size:15px;color:var(--sub);font-weight:600;margin-top:4px}
-.hero-role{font-weight:700;margin:-8px 0 18px}
 /* sections */
-section{padding:80px 0;border-top:1px solid var(--line)}
-.sec-head{margin-bottom:40px}
-.sec-head .en{color:var(--accent);font-size:13px;font-weight:700}
-.sec-head h2{font-size:clamp(24px,3.4vw,32px);line-height:1.4;margin-top:6px}
-.sec-head p{color:var(--sub);margin-top:10px}
+section{padding:96px 0}
+section.tint{background:var(--tint)}
+.sec-head{margin-bottom:44px}
+.sec-head .en{display:block;color:#050505;font-size:clamp(48px,7vw,70px);line-height:1}
+.sec-head h2{font-size:clamp(20px,2.6vw,26px);line-height:1.5;margin-top:10px;color:var(--teal);font-weight:700}
+.sec-head p{color:var(--sub);margin-top:8px}
 
 /* strengths */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:860px){.grid3{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px}
-.card .num{font-family:Montserrat,sans-serif;font-weight:700;color:var(--accent);font-size:14px}
-.card h3{font-size:19px;line-height:1.5;margin:8px 0 12px}
-.card p,.card li{color:var(--sub);font-size:15px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border-radius:8px;box-shadow:var(--shadow);padding:35px 30px 30px}
+.card .num{font-family:"Barlow Condensed",sans-serif;font-weight:600;color:var(--cyan);font-size:30px;line-height:1}
+.card h3{font-size:19px;line-height:1.55;margin:10px 0 12px;color:var(--ink)}
+.card p,.card li{font-size:15px}
 .card ul{padding-left:1.2em;margin-top:8px}
 
 /* results */
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 @media(max-width:760px){.grid2{grid-template-columns:1fr}}
-.result-link{text-decoration:none;transition:transform .15s,box-shadow .15s}
-.result-link:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
-.result .client{font-size:13px;color:var(--sub);margin:-12px 0 16px}
-.result .big{font-size:18px;margin-bottom:16px}
-.result .big b{font-family:Montserrat,"Noto Sans JP",sans-serif;font-size:30px;color:var(--accent);margin:0 4px}
-.result{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px;display:flex;flex-direction:column}
-.result .tag{font-size:12px;color:var(--accent);font-weight:700}
-.result h3{font-size:18px;margin:4px 0 18px}
+.result{background:var(--surface);border-radius:8px;box-shadow:var(--shadow);padding:35px 30px 30px;display:flex;flex-direction:column}
+.result-link{text-decoration:none;transition:transform .15s}
+.result-link:hover{transform:translateY(-3px)}
+.result .tag{font-size:14px;color:var(--cyan);font-weight:700}
+.result h3{font-size:19px;margin:4px 0 16px;color:var(--ink)}
+.result .client{font-size:14px;margin:-10px 0 16px}
+.result .client::before{content:"CLIENT　";color:var(--cyan);font-size:12px}
+.result .big{font-size:17px;margin-bottom:16px;color:var(--ink)}
+.result .big b{font-size:28px;color:var(--teal);margin:0 4px}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px 10px;margin-bottom:18px}
-.stat b{display:block;font-family:Montserrat,"Noto Sans JP",sans-serif;font-size:26px;line-height:1.2}
+.stat b{display:block;font-size:26px;line-height:1.2;color:var(--ink)}
 .stat small{color:var(--sub);font-size:12px}
-.result .scope{font-size:13px;color:var(--sub);border-top:1px dashed var(--line);padding-top:14px;margin-top:auto}
-.highlight{background:var(--accent-soft);border-radius:6px;padding:8px 12px;font-size:14px;margin-bottom:14px}
-.note{font-size:12px;color:var(--sub);margin-top:16px}
+.result .scope{font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding-top:14px;margin-top:auto}
+.result .scope::before{content:"JOB　";color:var(--cyan);font-size:12px}
+.highlight{background:var(--light);color:var(--teal-dark);border-radius:6px;padding:8px 12px;font-size:14px;font-weight:500;margin-bottom:14px}
+.note{font-size:12px;color:var(--sub);margin-top:18px}
 
 /* works */
 .filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
-.filter button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 16px;cursor:pointer;color:var(--ink)}
-.filter button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.filter button{font:inherit;font-size:13px;border:1px solid var(--teal-dark);background:#fff;border-radius:999px;padding:5px 16px;cursor:pointer;color:var(--teal-dark)}
+.filter button[aria-pressed=true]{background:var(--teal-dark);color:#fff}
 .works{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media(max-width:860px){.works{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.works{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.works{grid-template-columns:1fr}}
-.work{text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
-.work:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
-.thumb{aspect-ratio:16/9;background:#ddd center/cover no-repeat;position:relative}
-.thumb .kind{position:absolute;left:10px;top:10px;background:rgba(22,24,29,.85);color:#fff;font-size:11px;padding:2px 10px;border-radius:4px}
-.work .body{padding:16px 18px 20px}
-.work .ch{font-size:12px;color:var(--accent);font-weight:700}
-.work h3{font-size:15px;line-height:1.6;margin:4px 0 8px}
+.work{text-decoration:none;background:var(--surface);border-radius:8px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s}
+.work:hover{transform:translateY(-3px)}
+.thumb{aspect-ratio:16/9;background:#dfe7e8 center/cover no-repeat;position:relative}
+.thumb .kind{position:absolute;left:10px;top:10px;background:var(--teal-dark);color:#fff;font-size:11px;padding:2px 10px;border-radius:4px;letter-spacing:0;font-weight:500}
+.thumb.own{background:linear-gradient(135deg,var(--teal-dark),var(--teal));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:24px;letter-spacing:.1em}
+.thumb.own .kind{background:var(--yellow);color:var(--ink)}
+.work .body{padding:18px 20px 22px}
+.work .ch{font-size:12px;color:var(--teal);font-weight:700}
+.work h3{font-size:15px;line-height:1.6;margin:4px 0 8px;color:var(--ink)}
 .work p{font-size:13px;color:var(--sub)}
 .work .role{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.work .role span{font-size:11px;border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--sub)}
-.works-sub{font-size:18px;margin:48px 0 18px}
+.work .role span{font-size:11px;background:var(--light);color:var(--teal-dark);border-radius:4px;padding:1px 8px}
+.works-sub{font-size:19px;margin:56px 0 20px;color:var(--ink);padding-left:12px;border-left:4px solid var(--cyan);line-height:1.4}
 
 /* skills */
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 @media(max-width:760px){.skills{grid-template-columns:1fr}}
-.skill h3{font-size:17px;margin-bottom:8px}
-.skill h3::before{content:"";display:inline-block;width:10px;height:10px;background:var(--accent);border-radius:2px;margin-right:10px;vertical-align:1px}
-
-/* flow */
-.flow{counter-reset:f;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-@media(max-width:860px){.flow{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.flow{grid-template-columns:1fr}}
-.flow li{list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px}
-.flow li::before{counter-increment:f;content:"STEP " counter(f);font-family:Montserrat,sans-serif;font-weight:700;font-size:12px;color:var(--accent)}
-.flow h3{font-size:16px;margin:6px 0 6px}
-.flow p{font-size:14px;color:var(--sub)}
-
-/* about */
-.about{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
-@media(max-width:720px){.about{grid-template-columns:1fr}}
-.about-solo{grid-template-columns:1fr;max-width:760px}
-.about img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
-.about h3{font-size:22px}
-.about .role-line{color:var(--sub);font-size:14px;margin-bottom:18px}
-.timeline{list-style:none;margin-top:18px;border-left:2px solid var(--line);padding-left:20px}
-.timeline li{position:relative;margin-bottom:16px;font-size:15px}
-.timeline li::before{content:"";position:absolute;left:-27px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
-.timeline b{display:block}
-.timeline span{color:var(--sub);font-size:14px}
+.skill h3{font-size:18px;margin:0 0 8px;color:var(--ink)}
 .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 
+/* flow */
+.flow{counter-reset:f;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.flow{grid-template-columns:1fr}}
+.flow li{list-style:none;background:var(--surface);border-radius:8px;box-shadow:var(--shadow);padding:28px 24px}
+.flow li::before{counter-increment:f;content:"0" counter(f);font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:34px;line-height:1;color:var(--cyan)}
+.flow h3{font-size:17px;margin:8px 0 6px;color:var(--ink)}
+.flow p{font-size:14px}
+
+/* about */
+.about-solo{max-width:780px}
+.timeline{list-style:none;margin-top:22px;border-left:2px solid var(--light);padding-left:22px}
+.timeline li{position:relative;margin-bottom:18px;font-size:15px}
+.timeline li::before{content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--teal)}
+.timeline b{display:block;color:var(--ink)}
+.timeline span{color:var(--sub);font-size:14px}
+
 /* contact */
-.contact{background:var(--dark);color:#fff;border-top:none}
-.contact .sec-head p{color:#b8bac2}
-.contact a.mail{display:inline-block;font-family:Montserrat,sans-serif;font-size:clamp(20px,3.6vw,30px);color:#fff;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:4px}
-.contact .site{display:block;margin-top:18px;color:#b8bac2;font-size:14px}
-footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;padding:24px 0 36px}
+.contact{background:var(--teal-dark);color:#fff}
+.contact .sec-head .en{color:#fff}
+.contact .sec-head h2{color:var(--cyan)}
+.contact .sec-head p{color:#cfe7ea}
+.contact a.mail{display:inline-block;font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:clamp(28px,4.4vw,40px);color:#fff;text-decoration:none;border-bottom:3px solid var(--yellow);line-height:1.3}
+.contact .site{display:table;margin-top:24px;background:var(--yellow);color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;padding:12px 22px;border-radius:999px}
+footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding:22px 0 30px}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#">Hirotsugu Takahashi<span>.</span></a>
+    <a class="logo" href="#"><img src="img/crifa-logo.svg" alt="crifa" width="80" height="30"><span>髙橋弘嗣 ポートフォリオ</span></a>
     <nav>
       <a href="#works">制作した動画</a>
       <a href="#results">運用実績</a>
       <a href="#strength">強み</a>
       <a href="#skill">できること</a>
       <a href="#about">経歴</a>
-      <a href="#contact">お問い合わせ</a>
+      <a class="nav-cta" href="#contact">お問い合わせ</a>
     </nav>
   </div>
 </header>
@@ -158,7 +166,6 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
 <main>
 <div class="hero">
   <div class="wrap hero-grid">
-    <img class="hero-photo" src="img/profile.jpg" alt="髙橋弘嗣" width="200" height="200">
     <div>
       <div class="kicker en">PORTFOLIO</div>
       <h1>髙橋 弘嗣<small class="en">Hirotsugu Takahashi</small></h1>
@@ -167,8 +174,9 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
       <div class="chips">
         <span class="chip">編集（長尺・ショート）</span><span class="chip">テロップ・構成の雛形づくり</span><span class="chip">サムネイル</span><span class="chip">チャンネル運用・分析</span><span class="chip">Googleアナリティクス</span>
       </div>
-      <a class="cta" href="#works">制作した動画を見る</a>
+      <div class="btns"><a class="cta" href="#works">制作した動画を見る ↓</a><a class="cta ghost" href="#contact">お問い合わせ ↗</a></div>
     </div>
+    <img class="hero-photo" src="img/profile.jpg" alt="髙橋弘嗣" width="280" height="280">
   </div>
 </div>
 
@@ -184,6 +192,10 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
     </div>
 
     <div class="works" id="works-grid">
+      <a class="work" data-c="life" href="https://www.youtube.com/@imaikitemasu" target="_blank" rel="noopener">
+        <div class="thumb own">今、生きてます。<span class="kind">自社番組・公開準備中</span></div>
+        <div class="body"><div class="ch">自社番組の立ち上げ</div><h3>インタビュー番組「今、生きてます。」</h3><p>新宿で出会った人に「今、何を抱えて生きていますか」を聞く番組。チャンネルの立ち上げから企画・編集・サムネイルまで自社で制作しています（10回分を制作、順に公開予定）</p><div class="role"><span>立ち上げ</span><span>企画</span><span>編集</span><span>サムネイル</span></div></div>
+      </a>
       <a class="work" data-c="biz" href="https://www.youtube.com/playlist?list=PL8lZLH937WYQcz5hZ7xUD9Tt-wm_ZX0kH" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/N2J22MVPoHY/hqdefault.jpg)"><span class="kind">再生リスト</span></div>
         <div class="body"><div class="ch">運用と制作の両方を担当</div><h3>企業チャンネルの運用・制作</h3><p>スタートアップ投資TV、SESチャンネル、なこーど婚活応援チャンネル、TLDチャンネル ほか</p><div class="role"><span>運用</span><span>企画</span><span>制作</span></div></div>
@@ -211,6 +223,10 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
       <a class="work" data-c="biz" href="https://youtu.be/xo3nvlI6Zl0" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/xo3nvlI6Zl0/hqdefault.jpg)"></div>
         <div class="body"><div class="ch">こうすけ【軽貨物で成り上がり】</div><h3>2人分の荷物を1人で検証してみました</h3><p>求人のためのチャンネル。立ち上げ・運用から担当（開始1か月で採用に成功）</p><div class="role"><span>運用</span><span>制作</span></div></div>
+      </a>
+      <a class="work" data-c="biz" href="https://youtu.be/rb7yTnrCjBY" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/rb7yTnrCjBY/hqdefault.jpg)"></div>
+        <div class="body"><div class="ch">マーケティングデータ分析ラボ</div><h3>スプレッドシートとBigQuery連携の神機能「コネクテッドシート」とは？</h3><div class="role"><span>制作</span></div></div>
       </a>
       <a class="work" data-c="biz" href="https://www.youtube.com/watch?v=GQAWiEGA6Hs" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GQAWiEGA6Hs/hqdefault.jpg)"></div>
@@ -248,7 +264,7 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
   </div>
 </section>
 
-<section id="results">
+<section id="results" class="tint">
   <div class="wrap">
     <div class="sec-head"><div class="en">RESULTS</div><h2>運用実績の一例</h2><p>チャンネルの立ち上げから運用・制作まで担当した例です。</p></div>
     <h3 class="works-sub" style="margin-top:0">独立してからの実績（株式会社クリファ）</h3>
@@ -335,7 +351,7 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
   </div>
 </section>
 
-<section id="skill">
+<section id="skill" class="tint">
   <div class="wrap">
     <div class="sec-head"><div class="en">SKILL</div><h2>できること</h2></div>
     <div class="skills">
@@ -361,7 +377,7 @@ footer{background:var(--dark);color:#7d808a;font-size:12px;text-align:center;pad
   </div>
 </section>
 
-<section id="about">
+<section id="about" class="tint">
   <div class="wrap">
     <div class="sec-head"><div class="en">CAREER</div><h2>経歴</h2></div>
     <div class="about about-solo">
