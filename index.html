@@ -342,6 +342,29 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 @media(max-width:760px){.kv-photos{display:none}.kv{padding-top:56px}}
 /* 右上の写真はメインの写真の後ろへ */
 .kvp-rt2{z-index:1}
+
+/* monitor */
+.monitor-band{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:1160px;margin:0 auto 8px;padding:14px 20px;background:#fffde0;border:2px solid var(--yellow);border-radius:10px;text-decoration:none;color:var(--ink)}
+.mb-tag{background:var(--yellow);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px}
+.mb-text{flex:1 1 300px;font-weight:700;font-size:15px}
+.mb-more{color:var(--teal-dark);font-weight:700;font-size:14px;text-decoration:underline}
+@media(max-width:1200px){.monitor-band{margin:0 20px 8px}}
+.monitor{margin-bottom:28px}
+.mon-card{background:#fff;border-radius:12px;border:2px solid #12636c;padding:28px 28px 22px}
+.mon-head{display:flex;justify-content:space-between;align-items:center}
+.mon-label{font-weight:800;font-size:18px;color:var(--teal-dark)}
+.mon-left{background:var(--yellow);font-size:12px;font-weight:800;padding:2px 10px;border-radius:999px}
+.mon-price{margin-top:10px}
+.mon-price b{font-size:32px;color:var(--ink);font-weight:800}
+.mon-price small{font-size:13px;color:var(--sub);margin-left:4px}
+.mon-note{font-size:14px;color:var(--teal-dark);font-weight:500;margin:2px 0 14px}
+.mon-list{list-style:none;display:grid;gap:8px}
+.mon-list li{position:relative;padding-left:24px;font-size:14px}
+.mon-list li::before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/10px no-repeat}
+.mon-cond{max-width:760px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:26px 28px;text-align:center}
+.mon-cond h3{font-size:18px;color:var(--ink);margin-bottom:10px}
+.mon-cond ol{text-align:left;display:inline-block;margin:0 auto 20px;padding-left:1.4em;font-size:15px}
+.mon-cond ol li{margin:4px 0}
 </style>
 </head>
 <body>
@@ -379,6 +402,8 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
     </div>
   </div>
 </div>
+
+<a class="monitor-band" href="#monitor"><span class="mb-tag">募集中</span><span class="mb-text">実績づくりのため、「AI編集」と「ホームページ制作」のモニターを各2社まで募集しています</span><span class="mb-more">くわしく見る</span></a>
 
 <section id="works">
   <div class="wrap">
@@ -602,7 +627,7 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
           <li><b>株式会社Suneight</b><span>YouTubeディレクター・PM。企業チャンネルの立ち上げ・運用・広告動画の制作。「令和の虎」の制作にも参加</span></li>
           <li><b>株式会社クリファ（2025年10月〜）</b><span>独立して設立。ディレクターと編集者のチームで、企業や個人の方のYouTubeの編集と運用をお受けしています</span></li>
         </ul>
-        <p class="tool-dev">こうした業務用のWebアプリも、自社で企画・開発しています。「動画まわりのこの作業を楽にしたい」というご相談もお受けします。</p>
+        <p class="tool-dev">制作をスムーズにするための道具も、自分たちで作っています。</p>
       </div>
     </div>
   </div>
@@ -619,7 +644,7 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
       </button>
     </div>
     <p class="tool-cap">45秒でわかる、Vcheckくんの使い方</p>
-    <p class="tool-dev">こうした業務用のWebアプリも、自社で企画・開発しています。「動画まわりのこの作業を楽にしたい」というご相談もお受けします。</p>
+    <p class="tool-dev">制作をスムーズにするための道具も、自分たちで作っています。</p>
   </div>
 </section>
 
@@ -657,6 +682,49 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
         <div class="thumb" style="background-image:url(img/web-dic.jpg);aspect-ratio:16/10"><span class="kind">サービスサイトの改善</span></div>
         <div class="body"><div class="ch">ディープロ（前職・Web担当）</div><h3>エンジニアスクールのサイトの改修と効果測定</h3><p>コンバージョン測定の設定、ヒートマップ（Microsoft Clarity）の導入と見える化、改修を続けて改善（半年でCVR 0.8%上昇）</p><div class="role"><span>改修</span><span>CV測定</span><span>ヒートマップ分析</span></div></div>
       </a>
+    </div>
+  </div>
+</section>
+
+<section id="monitor" class="tint">
+  <div class="wrap">
+    <div class="sec-head center"><div class="en">MONITOR</div><h2>実績づくりのためのモニター募集（各2社まで）</h2><p>新しいサービスの実績をつくるため、条件つきで特別にお受けしています。</p></div>
+    <div class="grid2 monitor">
+      <div class="mon-card">
+        <div class="mon-head"><span class="mon-label">AI編集</span><span class="mon-left">残り2社</span></div>
+        <p class="mon-price"><b>1本 10,000円</b><small>（税別）</small></p>
+        <p class="mon-note">外注すると1本5万円ほどかかることも多い編集を、AIと人のチェックで</p>
+        <ul class="mon-list">
+          <li>動画1本15分まで（15分を超える分は5分ごとに5,000円）</li>
+          <li>素材の共有から3営業日で初稿（5本まとめても3営業日）</li>
+          <li>1本につき2か所、担当者がオリジナルの演出を追加（AIまかせにしません）</li>
+          <li>サムネイル制作（修正対応あり）</li>
+          <li>YouTubeへの投稿と、タイトル・概要欄・タグの作成</li>
+          <li>修正は自社ツール「Vcheckくん」で、場面ごとにコメントするだけ</li>
+        </ul>
+      </div>
+      <div class="mon-card">
+        <div class="mon-head"><span class="mon-label">ホームページ制作</span><span class="mon-left">残り2社</span></div>
+        <p class="mon-price"><b>制作費 0円</b><small>（ドメイン・サーバー代は実費）</small></p>
+        <p class="mon-note">動画つき・効果測定つきのホームページを、立ち上げから</p>
+        <ul class="mon-list">
+          <li>5ページまでの会社・サービスのホームページ</li>
+          <li>リサーチ、コンセプト設計、デザイン、コーディング</li>
+          <li>サービス紹介の動画を1本つくって埋め込み</li>
+          <li>Googleアナリティクス・ヒートマップ・Search Consoleの設定</li>
+          <li>公開後3か月は、月1回の分析を無料（4か月目からは続けるか選べます）</li>
+          <li>修正は2回まで。会員ページ・予約・ネットショップなどの仕組みは対象外</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mon-cond">
+      <h3>モニターの条件（共通）</h3>
+      <ol>
+        <li>こまめにやり取りし、フィードバックをいただけること</li>
+        <li>事例として、お名前つきでポートフォリオに載せさせていただけること</li>
+        <li>公開後の数字（再生数・問い合わせなど）を一緒に見させていただけること</li>
+      </ol>
+      <a class="kv-btn" href="#contact">モニターに申し込む・相談する</a>
     </div>
   </div>
 </section>
