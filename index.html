@@ -798,15 +798,7 @@ if(cf){cf.addEventListener('submit',function(e){e.preventDefault();
   if(!name||!email||!kind||!msg){err.textContent='必須の項目を入れてください。';return;}
   if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent='メールアドレスの形を確かめてください。';return;}
   err.textContent='';
-  var body='お名前：'+name+'
-会社名・チャンネル名：'+(company||'-')+'
-メールアドレス：'+email+'
-ご用件：'+kind+'
-URL：'+(url||'-')+'
-
-'+msg+'
-
-（ポートフォリオサイトのフォームから）';
+  var body=['お名前：'+name,'会社名・チャンネル名：'+(company||'-'),'メールアドレス：'+email,'ご用件：'+kind,'URL：'+(url||'-'),'',msg,'','（ポートフォリオサイトのフォームから）'].join('\n');
   location.href='mailto:office@crifa.co.jp?subject='+encodeURIComponent('【お問い合わせ】'+kind+'（'+name+'様）')+'&body='+encodeURIComponent(body);
 });}
 </script>
