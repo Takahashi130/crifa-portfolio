@@ -290,6 +290,25 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 .tool-player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:14px}
 .tool-cap{text-align:center;margin-top:14px;font-size:14px;color:var(--sub)}
 #tool .tool-dev{max-width:880px;margin:28px auto 0}
+
+/* tools を写真の右上へ */
+.kv-tools{position:absolute;right:-60px;top:-40px;z-index:4;width:330px;background:#fff;border-radius:16px;padding:16px 16px 10px;box-shadow:0 20px 40px -20px rgba(18,99,108,.45)}
+.kv-tools .tools-cap{margin-bottom:10px}
+.kv-tools .tools-list{display:grid;grid-template-columns:repeat(4,1fr);gap:10px 6px}
+.kv-tools .tl{width:auto}
+.kv-tools .tl-ic{width:44px;height:44px;font-size:17px;border-radius:10px}
+.kv-tools .tl-ic svg{width:24px;height:24px}
+.kv-tools .tl-name{font-size:9.5px}
+.kvp-center{top:120px}
+.kvp-lb{top:400px}
+@media(max-width:1180px){
+  .kv-photos{aspect-ratio:auto;height:auto;padding-bottom:0}
+  .kv-photos .kvp-center,.kv-photos .kvp-lb{position:relative;left:auto;top:auto;bottom:auto}
+  .kv-photos .kvp-center{width:100%}
+  .kv-photos .kvp-lb{width:62%;margin:-18% 0 0 -2%;display:block}
+  .kv-tools{position:relative;right:auto;top:auto;width:100%;margin-top:18px}
+  .plus{display:none}
+}
 </style>
 </head>
 <body>
@@ -318,13 +337,12 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
       <h1 class="kv-title"><span class="kv-em">成果</span>を意識した<br>動画を。</h1>
       <p class="kv-lead">YouTubeの編集と運用を、ディレクターと編集者のチームでお受けしています。40社以上のチャンネル運用で得た経験をもとに、見られて、成果につながる動画をつくります。</p>
       <div class="kv-btns"><a class="kv-btn" href="#works">制作実績を見る</a><a class="kv-btn outline" href="#contact">お問い合わせ</a></div>
-      <div class="tools"><p class="tools-cap">使っているツール</p><ul class="tools-list"><li class="tl" title="Premiere Pro"><span class="tl-ic" style="background:#00005B;color:#9999FF;box-shadow:inset 0 0 0 2px #9999FF">Pr</span><span class="tl-name">Premiere Pro</span></li><li class="tl" title="After Effects"><span class="tl-ic" style="background:#00005B;color:#D291FF;box-shadow:inset 0 0 0 2px #D291FF">Ae</span><span class="tl-name">After Effects</span></li><li class="tl" title="Photoshop"><span class="tl-ic" style="background:#001E36;color:#31A8FF;box-shadow:inset 0 0 0 2px #31A8FF">Ps</span><span class="tl-name">Photoshop</span></li><li class="tl" title="Illustrator"><span class="tl-ic" style="background:#330000;color:#FF9A00;box-shadow:inset 0 0 0 2px #FF9A00">Ai</span><span class="tl-name">Illustrator</span></li><li class="tl" title="Google アナリティクス"><span class="tl-ic tl-white"><svg viewBox="0 0 24 24" width="30" height="30"><rect x="15" y="2" width="6" height="20" rx="3" fill="#F9AB00"/><rect x="8.5" y="9" width="6" height="13" rx="3" fill="#E37400"/><circle cx="5" cy="19" r="3" fill="#E37400"/></svg></span><span class="tl-name">Google アナリティクス</span></li><li class="tl" title="YouTube Studio"><span class="tl-ic tl-white"><svg viewBox="0 0 24 24" width="30" height="30"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="#FF0000"/><path d="M10 9v6l5.2-3z" fill="#fff"/></svg></span><span class="tl-name">YouTube Studio</span></li><li class="tl" title="スプレッドシート"><span class="tl-ic tl-white"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M6 2h8l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" fill="#0F9D58"/><path d="M14 2v5h5z" fill="#87CEAC"/><rect x="7" y="11" width="10" height="7" rx=".6" fill="#fff"/><path d="M7 14.5h10M12 11v7" stroke="#0F9D58" stroke-width="1.3"/></svg></span><span class="tl-name">スプレッドシート</span></li><li class="tl" title="iPhone 16 Pro"><span class="tl-ic tl-white"><svg viewBox="0 0 24 24" width="26" height="26"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><rect x="10" y="3.6" width="4" height="1.3" rx=".65" fill="#1d1d1f"/></svg></span><span class="tl-name">iPhone 16 Pro</span></li></ul></div>
     </div>
-    <div class="kv-photos" aria-hidden="true">
+    <div class="kv-photos">
       <span class="plus"></span>
       <img class="kvp kvp-center" src="img/kv-1.jpg" alt="" width="1096" height="822">
       <img class="kvp kvp-lb" src="img/kv-2.jpg" alt="" width="704" height="468">
-      <img class="kvp kvp-rt" src="img/kv-3.jpg" alt="" width="352" height="234">
+      <div class="kv-tools"><p class="tools-cap">使っているツール</p><ul class="tools-list"><li class="tl" title="Premiere Pro"><span class="tl-ic" style="background:#00005B;color:#9999FF;box-shadow:inset 0 0 0 2px #9999FF">Pr</span><span class="tl-name">Premiere Pro</span></li><li class="tl" title="After Effects"><span class="tl-ic" style="background:#00005B;color:#D291FF;box-shadow:inset 0 0 0 2px #D291FF">Ae</span><span class="tl-name">After Effects</span></li><li class="tl" title="Photoshop"><span class="tl-ic" style="background:#001E36;color:#31A8FF;box-shadow:inset 0 0 0 2px #31A8FF">Ps</span><span class="tl-name">Photoshop</span></li><li class="tl" title="Illustrator"><span class="tl-ic" style="background:#330000;color:#FF9A00;box-shadow:inset 0 0 0 2px #FF9A00">Ai</span><span class="tl-name">Illustrator</span></li><li class="tl" title="Google アナリティクス"><span class="tl-ic tl-white"><svg viewBox="0 0 24 24" width="30" height="30"><rect x="15" y="2" width="6" height="20" rx="3" fill="#F9AB00"/><rect x="8.5" y="9" width="6" height="13" rx="3" fill="#E37400"/><circle cx="5" cy="19" r="3" fill="#E37400"/></svg></span><span class="tl-name">Google アナリティクス</span></li><li class="tl" title="YouTube Studio"><span class="tl-ic tl-white"><svg viewBox="0 0 24 24" width="30" height="30"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="#FF0000"/><path d="M10 9v6l5.2-3z" fill="#fff"/></svg></span><span class="tl-name">YouTube Studio</span></li><li class="tl" title="スプレッドシート"><span class="tl-ic tl-white"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M6 2h8l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" fill="#0F9D58"/><path d="M14 2v5h5z" fill="#87CEAC"/><rect x="7" y="11" width="10" height="7" rx=".6" fill="#fff"/><path d="M7 14.5h10M12 11v7" stroke="#0F9D58" stroke-width="1.3"/></svg></span><span class="tl-name">スプレッドシート</span></li><li class="tl" title="iPhone 16 Pro"><span class="tl-ic tl-white"><svg viewBox="0 0 24 24" width="26" height="26"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><rect x="10" y="3.6" width="4" height="1.3" rx=".65" fill="#1d1d1f"/></svg></span><span class="tl-name">iPhone 16 Pro</span></li></ul></div>
     </div>
   </div>
 </div>
