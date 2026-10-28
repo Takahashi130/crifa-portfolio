@@ -145,6 +145,23 @@ section.tint{background:var(--tint)}
 .contact a.mail{display:inline-block;font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:clamp(28px,4.4vw,40px);color:#fff;text-decoration:none;border-bottom:3px solid var(--yellow);line-height:1.3}
 .contact .site{display:table;margin-top:24px;background:var(--yellow);color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;padding:12px 22px;border-radius:999px}
 footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding:22px 0 30px}
+
+/* hero simple */
+.hero{padding:0}
+.hero-simple{min-height:78vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:72px;padding-bottom:72px}
+.hero .catch{font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--teal);margin:22px 0 6px}
+.hero-simple .hero-role{margin:0;color:var(--sub);font-weight:500;font-size:14px}
+.hero-simple .btns{justify-content:center;margin-top:36px}
+.cta{display:inline-flex;align-items:center;gap:10px}
+.ic{width:22px;height:22px;flex:none}
+/* about */
+.about{display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:start;max-width:980px}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:24px}}
+.about-photo{width:220px;height:220px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:var(--shadow)}
+@media(max-width:760px){.about-photo{width:150px;height:150px}}
+.value{background:#fff;border-radius:8px;box-shadow:var(--shadow);padding:24px 26px;margin:24px 0 8px}
+.value h3,.career-h{font-size:18px;color:var(--ink);margin-bottom:6px}
+.career-h{margin-top:28px}
 </style>
 </head>
 <body>
@@ -157,7 +174,7 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
       <a href="#results">運用実績</a>
       <a href="#strength">強み</a>
       <a href="#skill">できること</a>
-      <a href="#about">経歴</a>
+      <a href="#about">自己紹介</a>
       <a class="nav-cta" href="#contact">お問い合わせ</a>
     </nav>
   </div>
@@ -165,18 +182,12 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 
 <main>
 <div class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="kicker en">PORTFOLIO</div>
-      <h1>髙橋 弘嗣<small class="en">Hirotsugu Takahashi</small></h1>
-      <div class="hero-role">YouTubeディレクター・動画編集／株式会社クリファ 代表</div>
-      <p>YouTubeの制作と運用に携わって4年以上になります。企業のチャンネルを40社以上運用し、タレントさんのチャンネルの雛形づくりや、採用・集客のための動画を作ってきました。前職でWeb担当をしていたので、動画を「見られる」だけでなく、問い合わせや採用につなげるところまで考えるのが得意です。</p>
-      <div class="chips">
-        <span class="chip">編集（長尺・ショート）</span><span class="chip">テロップ・構成の雛形づくり</span><span class="chip">サムネイル</span><span class="chip">チャンネル運用・分析</span><span class="chip">Googleアナリティクス</span>
-      </div>
-      <div class="btns"><a class="cta" href="#works">制作した動画を見る ↓</a><a class="cta ghost" href="#contact">お問い合わせ ↗</a></div>
-    </div>
-    <img class="hero-photo" src="img/profile.jpg" alt="髙橋弘嗣" width="280" height="280">
+  <div class="wrap hero-simple">
+    <div class="kicker en">PORTFOLIO</div>
+    <h1>髙橋 弘嗣<small class="en">Hirotsugu Takahashi</small></h1>
+    <p class="catch">成果にコミットする動画を。</p>
+    <div class="hero-role">YouTubeディレクター・動画編集／株式会社クリファ 代表</div>
+    <div class="btns"><a class="cta" href="#works"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor" opacity=".18"/><path d="M10 8.2v7.6l6-3.8z" fill="currentColor"/></svg>制作した動画を見る</a><a class="cta ghost" href="#contact"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M4.5 7.5l7.5 5.5 7.5-5.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>お問い合わせ</a></div>
   </div>
 </div>
 
@@ -379,14 +390,20 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 
 <section id="about" class="tint">
   <div class="wrap">
-    <div class="sec-head"><div class="en">CAREER</div><h2>経歴</h2></div>
-    <div class="about about-solo">
+    <div class="sec-head"><div class="en">ABOUT</div><h2>自己紹介・経歴</h2></div>
+    <div class="about">
+      <img class="about-photo" src="img/profile.jpg" alt="髙橋弘嗣" width="220" height="220">
       <div>
-        <p>エンジニアスクールを運営するIT企業で、人材紹介事業の立ち上げ、Web担当、動画事業の立ち上げを経験しました。その後、YouTube運用代行の会社でディレクター・PMとして企業チャンネルの運用と制作に携わり、2025年に独立し、株式会社クリファを設立しました。いまはディレクターと編集者のチームで、企業や個人の方のYouTubeの編集と運用をお受けしています。</p>
+        <p>YouTubeの制作と運用に携わって4年以上になります。企業のチャンネルを40社以上運用し、タレントさんのチャンネルの雛形づくりや、採用・集客のための動画を作ってきました。前職でWeb担当をしていたので、動画を「見られる」だけでなく、問い合わせや採用につなげるところまで考えるのが得意です。</p>
+        <div class="value">
+          <h3>大事にしていること</h3>
+          <p>動画制作は、現場が楽しいほど良いものになると考えています。出演者が緊張せずに話せる空気をつくり、チームが長く同じ担当で続けられるようにする。そのうえで、楽しさを支えるのは成果だと思っているので、数字にはこだわります。</p>
+        </div>
+        <h3 class="career-h">経歴</h3>
         <ul class="timeline">
           <li><b>株式会社ダイビック（DIVE INTO CODE）</b><span>人材紹介事業の立ち上げ、Web担当・プロダクトオーナー。自社YouTubeチャンネルを2つ立ち上げ、動画203本・教育コンテンツ49本の制作とライブ配信を担当</span></li>
           <li><b>株式会社Suneight</b><span>YouTubeディレクター・PM。企業チャンネルの立ち上げ・運用・広告動画の制作。「令和の虎」の制作にも参加</span></li>
-          <li><b>株式会社クリファ（2025年10月〜）</b><span>企業向けの動画マーケティング支援。YouTube・TikTokの運用支援と動画制作</span></li>
+          <li><b>株式会社クリファ（2025年10月〜）</b><span>独立して設立。ディレクターと編集者のチームで、企業や個人の方のYouTubeの編集と運用をお受けしています</span></li>
         </ul>
       </div>
     </div>
