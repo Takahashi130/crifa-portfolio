@@ -324,6 +324,19 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 .kv-tools .tools-cap{color:#fff}
 .kv-tools .tl-name{color:#e5f6f7}
 .kv-tools .tl-white{box-shadow:0 6px 14px -8px rgba(0,0,0,.35)}
+
+/* web services */
+.web-svc{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;margin-bottom:40px}
+@media(max-width:860px){.web-svc{grid-template-columns:1fr}}
+.web-svc-col{background:#fff;border-radius:8px;box-shadow:var(--shadow);padding:28px 28px 24px}
+.web-svc-col h3{font-size:18px;color:var(--ink);margin-bottom:12px}
+.web-svc-col ul{list-style:none;display:grid;gap:10px}
+.web-svc-col li{position:relative;padding-left:28px;font-size:15px}
+.web-svc-col li::before{content:"";position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.web-svc-col.monthly{background:linear-gradient(135deg,#029aaa,#12636c);color:#fff}
+.web-svc-col.monthly h3{color:#fff;display:flex;align-items:center;gap:10px}
+.web-svc-col.monthly h3 span{background:var(--yellow);color:var(--ink);font-size:12px;border-radius:999px;padding:2px 10px}
+.web-svc-col.monthly p{font-size:15px;color:#e5f6f7}
 </style>
 </head>
 <body>
@@ -608,6 +621,22 @@ footer{background:#0f3f45;color:#9cc3c7;font-size:12px;text-align:center;padding
 <section id="web">
   <div class="wrap">
     <div class="sec-head"><div class="en">WEB</div><h2>ホームページ制作・改善</h2><p>Web担当の経験を生かして、つくるだけでなく、問い合わせにつながる導線と効果測定まで考えます。</p></div>
+    <div class="web-svc">
+      <div class="web-svc-col">
+        <h3>つくるときにできること</h3>
+        <ul>
+          <li>ホームページのデザインと制作（コーディング）</li>
+          <li>商品・サービス紹介の動画をつくって、ページに埋め込む</li>
+          <li>Googleアナリティクスの導入と、問い合わせなどの成果（コンバージョン）の測定</li>
+          <li>ヒートマップ（Microsoft Clarity）の導入</li>
+          <li>Google Search Consoleの登録と、検索に出るための最初の設定（SEOの基本）</li>
+        </ul>
+      </div>
+      <div class="web-svc-col monthly">
+        <h3>公開したあと<span>月1回</span></h3>
+        <p>Googleアナリティクスとヒートマップのデータをもとに、月1回の分析と改善のご提案をします。どこで見る人が離れているか、どのページから問い合わせにつながっているかを見て、ページと動画の両方を直していきます。</p>
+      </div>
+    </div>
     <div class="grid3">
       <a class="work" href="https://matworks.co.jp/" target="_blank" rel="noopener">
         <div class="thumb" style="background-image:url(img/web-matworks.jpg);aspect-ratio:16/10"><span class="kind">コーポレートサイト</span></div>
